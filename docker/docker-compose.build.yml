@@ -1,9 +1,0 @@
-version: '3.7'
-
-services:
-  build:
-    image: node:10-alpine
-    # build: ./Dockerfile.build
-    volumes:
-      - .:/app
-    command: yarn && yarn build

@@ -11,8 +11,9 @@ services:
     volumes:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./data:/opt/traefik
-      - ./logs:/opt/logs
+      - ./data/traefik:/opt/traefik
+      - ./logs/traefik:/opt/logs
+    env_file: .env.prod
     command:
       # Dashboard
       - "--api" # Enables the web UI
@@ -53,10 +54,11 @@ services:
       - "traefik.http.routers.traefik-api-secured.middlewares=global-auth"
 
   api:
-    image: node:10-alpine
+    image: node:12-alpine
     restart: unless-stopped
     volumes:
-      - ./dist/api:/app
+      - ./dist/apps/api:/app
+    env_file: .env.prod
     command: node /app/main.js
     labels:
       - "traefik.enable=true"
@@ -75,7 +77,8 @@ services:
     image: nginx:1.17-alpine
     restart: unless-stopped
     volumes:
-      - ./dist/app:/usr/share/nginx/html
+      - ./dist/apps/app:/usr/share/nginx/html
+    env_file: .env.prod
     labels:
       - "traefik.enable=true"
       # Middlewares
@@ -107,9 +110,6 @@ services:
   postgres:
     image: postgres
     volumes:
-      - db_data:/var/lib/postgresql/data
-      - ./_db_init:/docker-entrypoint-initdb.d
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=movies_db
+      - ./data/postgres:/var/lib/postgresql/data
+      - ./docker/_db_init:/docker-entrypoint-initdb.d
+    env_file: .env.prod
