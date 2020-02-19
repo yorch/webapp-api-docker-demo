@@ -13,7 +13,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./data/traefik:/opt/traefik
       - ./logs/traefik:/opt/logs
-    env_file: .env.prod
     command:
       # Dashboard
       - "--api" # Enables the web UI
@@ -58,12 +57,12 @@ services:
     restart: unless-stopped
     volumes:
       - ./dist/apps/api:/app
-    env_file: .env.prod
+    env_file: .env
     command: node /app/main.js
     labels:
       - "traefik.enable=true"
       # HTTP Host
-      - "traefik.http.routers.api.rule=Host(`${API_SUBDOMAIN}.${DOMAIN}`)"
+      - "traefik.http.routers.api.rule=Host(`${API_SUBDOMAIN?Variable API_SUBDOMAIN not set}.${DOMAIN}`)"
       - "traefik.http.routers.api.entrypoints=web"
       # Redirects to HTTPS
       - "traefik.http.routers.api.middlewares=global-redirectscheme"
@@ -78,7 +77,6 @@ services:
     restart: unless-stopped
     volumes:
       - ./dist/apps/app:/usr/share/nginx/html
-    env_file: .env.prod
     labels:
       - "traefik.enable=true"
       # Middlewares
@@ -112,4 +110,4 @@ services:
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
       - ./docker/_db_init:/docker-entrypoint-initdb.d
-    env_file: .env.prod
+    env_file: .env
