@@ -36,7 +36,7 @@ services:
       - "traefik.enable=true"
       # Global Middlewares
       - "traefik.http.middlewares.global-redirectscheme.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.global-auth.basicauth.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}"
+      # - "traefik.http.middlewares.global-auth.basicauth.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}"
       # HTTP Host
       - "traefik.http.routers.traefik-api.rule=Host(`traefik.${DOMAIN?Variable DOMAIN not set}`)"
       - "traefik.http.routers.traefik-api.entrypoints=web"
@@ -50,7 +50,7 @@ services:
       - "traefik.http.routers.traefik-api-secured.tls.certResolver=webcert"
       - "traefik.http.routers.traefik-api-secured.service=api@internal"
       # Auth
-      - "traefik.http.routers.traefik-api-secured.middlewares=global-auth"
+      # - "traefik.http.routers.traefik-api-secured.middlewares=global-auth"
 
   api:
     image: node:12-alpine
@@ -72,6 +72,8 @@ services:
       - "traefik.http.routers.api-secured.entrypoints=web-secured"
       - "traefik.http.routers.api-secured.tls=true"
       - "traefik.http.routers.api-secured.tls.certResolver=webcert"
+      - "traefik.http.routers.api-secured.service=api-secured"
+      - "traefik.http.services.api-secured.loadbalancer.server.port=${SERVER_PORT?Variable SERVER_PORT not set}"
 
   app:
     image: nginx:1.17-alpine
