@@ -1,16 +1,25 @@
+import 'reflect-metadata';
 import * as express from 'express';
-import { Message } from '@demo-docker/api-interfaces';
+import { config } from './config';
+import { setupDatabase } from './database';
+import { setupRoutes } from './routes';
+
+const { port } = config;
 
 const app = express();
 
-const greeting: Message = { message: 'Welcome to api!' };
+(async () => {
+  const dbConnection = await setupDatabase();
 
-app.get('/api', (req, res) => {
-  res.send(greeting);
-});
+  app.use(express.json());
 
-const port = process.env.port || 3333;
-const server = app.listen(port, () => {
-  console.log('Listening at http://localhost:' + port + '/api');
-});
-server.on('error', console.error);
+  app.use(express.text());
+
+  setupRoutes({ app, dbConnection });
+
+  const server = app.listen(port, () => {
+    console.log(`Listening at http://localhost:${port}/api`);
+  });
+
+  server.on('error', console.error);
+})();
