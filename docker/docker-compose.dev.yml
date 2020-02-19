@@ -6,12 +6,12 @@ services:
     ports:
       - 5432:5432
     volumes:
-    - db_data:/var/lib/postgresql/data
-    - ./_db_init:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/postgresql/data
+      - ./_db_init:/docker-entrypoint-initdb.d
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=dvdrental
+      - POSTGRES_DB=movies_db
   adminer:
     image: adminer
     ports:
