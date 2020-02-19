@@ -2,5 +2,6 @@
 // When building for production, this file is replaced with `environment.prod.ts`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiBasePath: '/api'
 };

@@ -1,26 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { Message } from '@demo-docker/api-interfaces';
+import React from 'react';
+import { Admin, Resource } from 'react-admin';
+// import jsonServerProvider from 'ra-data-json-server';
+import simpleRestProvider from 'ra-data-simple-rest';
+import { environment } from '../environments/environment';
+import { ActorList } from './ActorList';
+import { MovieList } from './MovieList';
+
+// const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
+const dataProvider = simpleRestProvider(environment.apiBasePath);
 
 export const App = () => {
-  const [m, setMessage] = useState<Message>({ message: '' });
-
-  useEffect(() => {
-    fetch('/api')
-      .then(r => r.json())
-      .then(setMessage);
-  }, []);
-
   return (
-    <>
-      <div style={{ textAlign: 'center' }}>
-        <h1>Welcome to app!</h1>
-        <img
-          width="450"
-          src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png"
-        />
-      </div>
-      <div>{m.message}</div>
-    </>
+    <Admin dataProvider={dataProvider}>
+        <Resource name="actors" list={ActorList} />
+        <Resource name="movies" list={MovieList} />
+    </Admin>
   );
 };
 

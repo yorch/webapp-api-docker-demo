@@ -5,3 +5,9 @@
  */
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+
+// Needed because of a bug when transpiling one of the deps of React Admin
+// https://github.com/inspect-js/has-symbols/issues/6
+// https://github.com/inspect-js/has-symbols/issues/4
+// https://github.com/inspect-js/has-symbols/issues/11
+(window as any).global = window;
