@@ -30,6 +30,7 @@
   "dependencies": {
     "@prisma/client": "2.0.0-preview022",
     "@prisma/photon": "2.0.0-preview019",
+    "cors": "2.8.5",
     "document-register-element": "1.13.1",
     "express": "4.17.1",
     "pg": "7.18.1",

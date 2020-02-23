@@ -1,4 +1,5 @@
 const {
+  DOMAIN,
   POSTGRES_HOST,
   POSTGRES_PORT,
   POSTGRES_DB,
@@ -8,6 +9,7 @@ const {
 } = process.env;
 
 export const config = {
+  domain: DOMAIN,
   database: {
     host: POSTGRES_HOST || 'localhost',
     port: Number(POSTGRES_PORT) || 5432,
