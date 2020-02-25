@@ -111,6 +111,23 @@ services:
       - "traefik.http.routers.app-secured.tls=true"
       - "traefik.http.routers.app-secured.tls.certResolver=webcert"
 
+  adminer:
+    image: adminer
+    depends_on:
+      - "postgres"
+    labels:
+      - "traefik.enable=true"
+      # HTTP Host
+      - "traefik.http.routers.adminer.rule=Host(`adminer.${DOMAIN}`)"
+      - "traefik.http.routers.adminer.entrypoints=web"
+      # Redirects to HTTPS
+      - "traefik.http.routers.adminer.middlewares=global-redirectscheme"
+      # HTTPS Host
+      - "traefik.http.routers.adminer-secured.rule=Host(`adminer.${DOMAIN}`)"
+      - "traefik.http.routers.adminer-secured.entrypoints=web-secured"
+      - "traefik.http.routers.adminer-secured.tls=true"
+      - "traefik.http.routers.adminer-secured.tls.certResolver=webcert"
+
   postgres:
     image: postgres
     volumes:
