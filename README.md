@@ -60,6 +60,7 @@ Once you have your Docker stack / services running, you can do a few different t
 - `docker ps -a` -> To see all the containers that are either running or stopped (and that have not been removed with `docker rm`).
 - `docker images` -> To see all the images your Docker host has pulled locally (ie: like when using `docker pull ${imageName}` or just by running a container which image does not exist locally).
 - `docker-compose -f docker-compose.prod.yml down` -> To stop and cleanup your Docker services. When there is a file named `docker-compose.yml`, the `-f` param can be skipped, but in this case, since we have a couple different Docker Compose files, we have to be explicit.
+- `docker-compos -f docker-compose.prod.yml logs` -> To see the logs from all the services in the Docker Compose file.
 
 ## Running locally
 
