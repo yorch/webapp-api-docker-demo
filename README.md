@@ -1,4 +1,46 @@
-# DemoDocker
+# Webapp and API Server with Docker Demo
+
+This is a demo project composed of:
+
+- React Web Application
+- NodeJS / Express server for handling API requests from a Postgres database
+- Docker orchestration to deploy and run the load balancer, webapp, server and database.
+
+The architecture and tech stack of the deployed application consist of:
+
+- [Traefik](https://traefik.io/): As the reverse proxy and load balancer for the web app and the API server with SSL termination, so all the requests to ports 80 and 443 (SSL / HTTPS) will go to it.
+- React and [React Admin](https://marmelab.com/react-admin/) for the Front End.
+- NodeJS / [Express.js](https://expressjs.com/) for the API server.
+- [TypeORM](https://github.com/typeorm/typeorm) as the [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) for the API server.
+- [PostgreSQL](https://www.postgresql.org/) for the database.
+- [Nx](https://nx.dev/), a CLI tool for managing monorepos.
+- [Adminer](https://www.adminer.org/) a simple web application to manage databases.
+
+## Requirements
+
+- You will need a server / VPS, ideally that has a public IP address. You can get a \$5/month VPS from providers as:
+  - [Digital Ocean](https://m.do.co/c/386aa021b4aa)
+  - [Vultr](https://www.vultr.com/?ref=6940743)
+- A domain, it could be a `.com`, `.net`, `.info`, `.cc` or any other domain you like.
+- Install Docker and [Docker Compose](https://docs.docker.com/compose/) in the server, both Digital Ocean and Vultr have images with Docker pre-installed. You could also use a regular Ubuntu 16.04 or Ubuntu 18.04 image and use a script like [this](https://github.com/yorch/server-simple-setup) to set it up (or do it manually, it's a great way to learn Linux, just check the [source code of the script](https://github.com/yorch/server-simple-setup/blob/master/server-setup.sh), it's pretty straightforward).
+
+## Getting Started
+
+- Once you have your server setup and you are SSH into it, clone this repo (or a fork of this if you created one).
+- Create an `.env` file based on `.env.sample` (ie: `cp .env.sample .env`).
+- Update the env variables in your new `.env` file, mainly `DOMAIN`.
+- Run the build:
+  ```sh
+  ./build-with-docker.sh
+  ```
+  This command will install all NodeJS dependencies and run the build using `yarn` inside a Docker container and saving the results in your server, so you don't have to install NodeJS / Yarn on the server, which makes this very portable.
+- Once the build is complete, the compiled bundles for the web app and server will live in `dist` directory.
+- Next, we need to run Docker Compose to prepare and start all the require containers for the whole stack. We can use:
+  ```sh
+  ./run-prod.sh
+  ```
+
+---
 
 This project was generated using [Nx](https://nx.dev).
 
