@@ -41,6 +41,7 @@ The architecture and tech stack of the deployed application consist of:
   ```sh
   ./run-prod.sh
   ```
+  This will run all the containers configured in `docker-compose.prod.yml`.
 
 ## Endpoints
 
@@ -50,6 +51,15 @@ Once the stack is running, you can access the different parts using:
 - API Server: `https://api.yourdomain.com`, you can change the subdomain in your `.env` file.
 - Traefik Dashboard: `https://traefik.yourdomain.com`, where you can see the different services configured in your Docker stack and that Traefik is serving.
 - DB Admin / Adminer: `https://adminer.yourdomain.com/`, a simple database management tool, you can use the DB credentials configured in the `.env` file to log in.
+
+## Some Docker commands
+
+Once you have your Docker stack / services running, you can do a few different things:
+
+- `docker ps` -> To see all the containers that are running:
+- `docker ps -a` -> To see all the containers that are either running or stopped (and that have not been removed with `docker rm`).
+- `docker images` -> To see all the images your Docker host has pulled locally (ie: like when using `docker pull ${imageName}` or just by running a container which image does not exist locally).
+- `docker-compose -f docker-compose.prod.yml down` -> To stop and cleanup your Docker services. When there is a file named `docker-compose.yml`, the `-f` param can be skipped, but in this case, since we have a couple different Docker Compose files, we have to be explicit.
 
 ---
 
