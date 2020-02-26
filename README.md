@@ -61,6 +61,29 @@ Once you have your Docker stack / services running, you can do a few different t
 - `docker images` -> To see all the images your Docker host has pulled locally (ie: like when using `docker pull ${imageName}` or just by running a container which image does not exist locally).
 - `docker-compose -f docker-compose.prod.yml down` -> To stop and cleanup your Docker services. When there is a file named `docker-compose.yml`, the `-f` param can be skipped, but in this case, since we have a couple different Docker Compose files, we have to be explicit.
 
+## Running locally
+
+If you want to run this project locally, you would need to run Postgres somehow, luckily, we can also use Docker for this (be sure to [install Docker](https://docs.docker.com/docker-for-mac/) in your computer first and to have it running):
+
+```sh
+./run-dev.sh
+```
+
+This will run a PostgreSQL container and will setup the database with dummy data, you can see the SQL script used in the bootstrap process [here](docker/_db_init).
+
+It will also run Adminer on port `8080`, so you can manage the database in a simple web application. If you have port conflicts, you can modify the file [`docker-compose.dev.yml`](docker-compose.dev.yml).
+
+To run the FE and the server, you would need to have NodeJS and Yarn locally installed and then run:
+
+```sh
+# Install dependencies
+yarn
+# Start both services
+yarn start
+```
+
+> Fun fact: Using Docker we could also skipped the dependency of having NodeJS and Yarn locally installed and still be able to work on this repo.
+
 ---
 
 This project was generated using [Nx](https://nx.dev).
