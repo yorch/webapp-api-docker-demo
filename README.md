@@ -21,7 +21,9 @@ The architecture and tech stack of the deployed application consist of:
 - You will need a server / VPS, ideally that has a public IP address. You can get a \$5/month VPS from providers as:
   - [Digital Ocean](https://m.do.co/c/386aa021b4aa)
   - [Vultr](https://www.vultr.com/?ref=6940743)
-- A domain, it could be a `.com`, `.net`, `.info`, `.cc` or any other domain you like.
+- A domain, it could be a `.com`, `.net`, `.info`, `.cc` or any other domain you like. You need to configure two DNS records for it:
+  - `A` record, that should point to the IP address of your newly configured server.
+  - `CNAME` record like: `*.yourdomain.com` to point to `yourdomain.com`, this will allow you to use any subdomain you may need (like `api.yourdomain.com`) with this stack without having to configure the DNS of your domain every time.
 - Install Docker and [Docker Compose](https://docs.docker.com/compose/) in the server, both Digital Ocean and Vultr have images with Docker pre-installed. You could also use a regular Ubuntu 16.04 or Ubuntu 18.04 image and use a script like [this](https://github.com/yorch/server-simple-setup) to set it up (or do it manually, it's a great way to learn Linux, just check the [source code of the script](https://github.com/yorch/server-simple-setup/blob/master/server-setup.sh), it's pretty straightforward).
 
 ## Getting Started
@@ -39,6 +41,15 @@ The architecture and tech stack of the deployed application consist of:
   ```sh
   ./run-prod.sh
   ```
+
+## Endpoints
+
+Once the stack is running, you can access the different parts using:
+
+- Front End / Web application: `https://yourdomain.com`, the domain that you configured in your `.env` file.
+- API Server: `https://api.yourdomain.com`, you can change the subdomain in your `.env` file.
+- Traefik Dashboard: `https://traefik.yourdomain.com`, where you can see the different services configured in your Docker stack and that Traefik is serving.
+- DB Admin / Adminer: `https://adminer.yourdomain.com/`, a simple database management tool, you can use the DB credentials configured in the `.env` file to log in.
 
 ---
 
