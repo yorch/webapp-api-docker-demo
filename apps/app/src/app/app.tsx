@@ -12,8 +12,8 @@ const dataProvider = simpleRestProvider(environment.apiBasePath);
 export const App = () => {
   return (
     <Admin dataProvider={dataProvider}>
-        <Resource name="actors" list={ActorList} />
-        <Resource name="movies" list={MovieList} />
+      <Resource name="actors" list={ActorList} />
+      <Resource name="movies" list={MovieList} />
     </Admin>
   );
 };

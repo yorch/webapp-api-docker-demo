@@ -16,7 +16,7 @@ const app = express();
     cors({
       // origin: domain ? `https://${domain}` : '',
       exposedHeaders: ['Content-Range'],
-      optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+      optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
     })
   );
 

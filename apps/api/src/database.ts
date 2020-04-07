@@ -17,14 +17,14 @@ export const setupDatabase = () =>
     entities: [
       // `${__dirname}/entity/*.ts`
       Actor,
-      Film
+      Film,
     ],
     // synchronize: true,
     synchronize: false,
-    logging: true
+    logging: true,
   })
-  .then((connection) => {
-    console.log('DB connection setup successfully!');
-    return connection;
-  })
-  .catch((error) => console.log(error));
+    .then((connection) => {
+      console.log('DB connection setup successfully!');
+      return connection;
+    })
+    .catch((error) => console.log(error));

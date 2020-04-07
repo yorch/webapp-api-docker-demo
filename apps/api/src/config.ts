@@ -5,7 +5,7 @@ const {
   POSTGRES_DB,
   POSTGRES_USER,
   POSTGRES_PASSWORD,
-  SERVER_PORT
+  SERVER_PORT,
 } = process.env;
 
 export const config = {
@@ -15,7 +15,7 @@ export const config = {
     port: Number(POSTGRES_PORT) || 5432,
     db: POSTGRES_DB || 'movies_db',
     user: POSTGRES_USER || 'postgres',
-    pass: POSTGRES_PASSWORD || 'password'
+    pass: POSTGRES_PASSWORD || 'password',
   },
-  port: SERVER_PORT || 3333
+  port: SERVER_PORT || 3333,
 };

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBasePath: 'https://api.barnaby.cc'
+  apiBasePath: 'https://api.barnaby.cc',
 };
