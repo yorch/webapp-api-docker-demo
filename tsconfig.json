@@ -16,7 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@demo-docker/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@webapp-api-docker-demo/api-interfaces": [
+        "libs/api-interfaces/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

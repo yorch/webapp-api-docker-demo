@@ -1,4 +1,4 @@
-import { Message } from '@demo-docker/api-interfaces';
+import { Message } from '@webapp-api-docker-demo/api-interfaces';
 import { environment } from './environments/environment';
 import { Actor, Film } from './entity';
 
@@ -17,7 +17,9 @@ export const setupRoutes = ({ app, dbConnection }) => {
     const { length } = entities;
     res.set('Content-Range', `actors 0-${length - 1}/${length}`);
     // eslint-disable-next-line @typescript-eslint/camelcase
-    res.json(entities.map(({ actor_id, ...rest }) => ({ id: actor_id, ...rest })));
+    res.json(
+      entities.map(({ actor_id, ...rest }) => ({ id: actor_id, ...rest }))
+    );
   });
 
   app.get(`${apiBasePath}/actors/:id`, async ({ params }, res) => {
@@ -31,7 +33,9 @@ export const setupRoutes = ({ app, dbConnection }) => {
     const { length } = entities;
     res.set('Content-Range', `actors 0-${length - 1}/${length}`);
     // eslint-disable-next-line @typescript-eslint/camelcase
-    res.json(entities.map(({ film_id, ...rest }) => ({ id: film_id, ...rest })));
+    res.json(
+      entities.map(({ film_id, ...rest }) => ({ id: film_id, ...rest }))
+    );
   });
 
   app.get(`${apiBasePath}/movies/:id`, async ({ params }, res) => {

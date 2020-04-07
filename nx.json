@@ -1,5 +1,5 @@
 {
-  "npmScope": "demo-docker",
+  "npmScope": "webapp-api-docker-demo",
   "implicitDependencies": {
     "workspace.json": "*",
     "package.json": {
