@@ -74,7 +74,7 @@
     "eslint-plugin-react-hooks": "3.0.0",
     "jest": "25.2.7",
     "prettier": "2.0.4",
-    "prisma2": "2.0.0-preview022",
+    "prisma2": "2.0.0-preview025",
     "rimraf": "3.0.2",
     "ts-jest": "25.3.1",
     "ts-node": "8.8.2",
