@@ -67,12 +67,12 @@ Once you have your Docker stack / services running, you can do a few different t
 If you want to run this project locally, you would need to run Postgres somehow, luckily, we can also use Docker for this (be sure to [install Docker](https://docs.docker.com/docker-for-mac/) in your computer first and to have it running):
 
 ```sh
-./run-dev.sh
+yarn start-local-db
 ```
 
 This will run a PostgreSQL container and will setup the database with dummy data, you can see the SQL script used in the bootstrap process [here](docker/_db_init).
 
-It will also run Adminer on port `8080`, so you can manage the database in a simple web application. If you have port conflicts, you can modify the file [`docker-compose.dev.yml`](docker-compose.dev.yml).
+It will also run Adminer on port `8090`, so you can manage the database in a simple web application. If you have port conflicts, you can modify the file [`docker-compose.dev.yml`](docker-compose.dev.yml).
 
 To run the FE and the server, you would need to have NodeJS and Yarn locally installed and then run:
 

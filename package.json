@@ -9,6 +9,8 @@
     "build": "nx build",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
+    "start-local-db": "docker-compose -f docker-compose.dev.yml up --build",
+    "stop-local-db": "docker-compose -f docker-compose.dev.yml down",
     "e2e": "nx e2e",
     "clean": "rimraf dist yarn-error.*",
     "affected:apps": "nx affected:apps",

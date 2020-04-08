@@ -12,9 +12,9 @@ services:
   adminer:
     image: adminer
     ports:
-      - 8080:8080
+      - 8090:8080
     depends_on:
-      - "postgres"
+      - postgres
 
 volumes:
   db_data:
