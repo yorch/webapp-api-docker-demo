@@ -1,2 +1,6 @@
+apps/*/Dockerfile
+data
 dist
+Dockerfile.builder
+logs
 node_modules
