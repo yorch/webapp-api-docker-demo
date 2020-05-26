@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - 12
+
+services:
+  - docker
+
+env:
+  - IMAGE_BASE_NAME=yorch/webapp-api-docker-demo
+  - IMAGE_VERSION=${TRAVIS_TAG:-TRAVIS_BRANCH}
+
+before_install:
+  - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+
+script:
+  - echo "             IMAGE_VERSION: ${IMAGE_VERSION}"
+  - echo "             TRAVIS_BRANCH: ${TRAVIS_BRANCH}"
+  - echo "                TRAVIS_TAG: ${TRAVIS_TAG}"
+  - echo "       TRAVIS_PULL_REQUEST: ${TRAVIS_PULL_REQUEST}"
+  - echo "TRAVIS_PULL_REQUEST_BRANCH: ${TRAVIS_PULL_REQUEST_BRANCH}"
+  - echo "   TRAVIS_PULL_REQUEST_SHA: ${TRAVIS_PULL_REQUEST_SHA}"
+  - echo "  TRAVIS_PULL_REQUEST_SLUG: ${TRAVIS_PULL_REQUEST_SLUG}"
+  - echo "             TRAVIS_JOB_ID: ${TRAVIS_JOB_ID}"
+  - echo "           TRAVIS_JOB_NAME: ${TRAVIS_JOB_NAME}"
+  - echo "         TRAVIS_JOB_NUMBER: ${TRAVIS_JOB_NUMBER}"
+  - echo "        TRAVIS_JOB_WEB_URL: ${TRAVIS_JOB_WEB_URL}"
+  - docker build -t ${IMAGE_BASE_NAME}-builder              -f Dockerfile.builder  .
+  - docker build -t ${IMAGE_BASE_NAME}-api:${IMAGE_VERSION} -f apps/api/Dockerfile .
+  - docker build -t ${IMAGE_BASE_NAME}-app:${IMAGE_VERSION} -f apps/app/Dockerfile .
+  # - docker push ${IMAGE_BASE_NAME}-api:${IMAGE_VERSION}
+  # - docker push ${IMAGE_BASE_NAME}-app:${IMAGE_VERSION}
