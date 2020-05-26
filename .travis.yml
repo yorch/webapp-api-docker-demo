@@ -27,7 +27,7 @@ before_deploy:
   - export IMAGE_VERSION_TAG=${TRAVIS_TAG:-$TRAVIS_BRANCH}
   - export IMAGE_VERSION=${TRAVIS_PULL_REQUEST_BRANCH:-$IMAGE_VERSION_TAG}
   - export IS_LATEST=$([ "$IMAGE_VERSION" == "master" ] && echo 1 || echo 0)
-  - export IS_MASTER_OR_PR=$([ ! -z "${TRAVIS_PULL_REQUEST_SHA}" ] || [ "${TRAVIS_BRANCH}" == "master" ])
+  - export IS_MASTER_OR_PR=$(([ ! -z "${TRAVIS_PULL_REQUEST_SHA}" ] || [ "${TRAVIS_BRANCH}" == "master" ]) && echo 1 || echo 0)
   - docker tag ${IMAGE_BASE_NAME}-app ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:${IMAGE_VERSION}
   - docker tag ${IMAGE_BASE_NAME}-api ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-api:${IMAGE_VERSION}
 deploy:
@@ -46,7 +46,7 @@ deploy:
   on:
     all_branches: true
     # condition: ${TRAVIS_BRANCH} =~ ^(staging|production)$
-    condition: -z "${TRAVIS_PULL_REQUEST_SHA}"
+    condition: ${IS_MASTER_OR_PR} == 1
   # on:
   #   tags: true
   #   branches:
