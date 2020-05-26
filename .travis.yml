@@ -9,17 +9,17 @@ jobs:
     - stage: build docker image
       script:
         - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-        - echo "             IMAGE_VERSION: ${IMAGE_VERSION}"
-        - echo "             TRAVIS_BRANCH: ${TRAVIS_BRANCH}"
-        - echo "                TRAVIS_TAG: ${TRAVIS_TAG}"
-        - echo "       TRAVIS_PULL_REQUEST: ${TRAVIS_PULL_REQUEST}"
-        - echo "TRAVIS_PULL_REQUEST_BRANCH: ${TRAVIS_PULL_REQUEST_BRANCH}"
-        - echo "   TRAVIS_PULL_REQUEST_SHA: ${TRAVIS_PULL_REQUEST_SHA}"
-        - echo "  TRAVIS_PULL_REQUEST_SLUG: ${TRAVIS_PULL_REQUEST_SLUG}"
-        - echo "             TRAVIS_JOB_ID: ${TRAVIS_JOB_ID}"
-        - echo "           TRAVIS_JOB_NAME: ${TRAVIS_JOB_NAME}"
-        - echo "         TRAVIS_JOB_NUMBER: ${TRAVIS_JOB_NUMBER}"
-        - echo "        TRAVIS_JOB_WEB_URL: ${TRAVIS_JOB_WEB_URL}"
+        - echo "             IMAGE_VERSION -> ${IMAGE_VERSION}"
+        - echo "             TRAVIS_BRANCH -> ${TRAVIS_BRANCH}"
+        - echo "                TRAVIS_TAG -> ${TRAVIS_TAG}"
+        - echo "       TRAVIS_PULL_REQUEST -> ${TRAVIS_PULL_REQUEST}"
+        - echo "TRAVIS_PULL_REQUEST_BRANCH -> ${TRAVIS_PULL_REQUEST_BRANCH}"
+        - echo "   TRAVIS_PULL_REQUEST_SHA -> ${TRAVIS_PULL_REQUEST_SHA}"
+        - echo "  TRAVIS_PULL_REQUEST_SLUG -> ${TRAVIS_PULL_REQUEST_SLUG}"
+        - echo "             TRAVIS_JOB_ID -> ${TRAVIS_JOB_ID}"
+        - echo "           TRAVIS_JOB_NAME -> ${TRAVIS_JOB_NAME}"
+        - echo "         TRAVIS_JOB_NUMBER -> ${TRAVIS_JOB_NUMBER}"
+        - echo "        TRAVIS_JOB_WEB_URL -> ${TRAVIS_JOB_WEB_URL}"
         - docker build -t ${IMAGE_BASE_NAME}-builder  -f Dockerfile.builder  .
         - docker build -t ${IMAGE_BASE_NAME}-api      -f apps/api/Dockerfile .
         - docker build -t ${IMAGE_BASE_NAME}-app      -f apps/app/Dockerfile .
