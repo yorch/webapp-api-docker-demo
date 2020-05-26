@@ -6,8 +6,7 @@ services:
   - docker
 
 env:
-  - IMAGE_BASE_NAME=yorch/webapp-api-docker-demo
-  - IMAGE_VERSION=${TRAVIS_TAG:-TRAVIS_BRANCH}
+  - IMAGE_BASE_NAME=yorch/webapp-api-docker-demo IMAGE_VERSION=${TRAVIS_TAG:-TRAVIS_BRANCH}
 
 before_install:
   - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
