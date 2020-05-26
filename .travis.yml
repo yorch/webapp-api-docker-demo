@@ -1,37 +1,9 @@
-# services:
-#   - docker
-
-# env:
-#   - IMAGE_BASE_NAME=webapp-api-docker-demo IMAGE_VERSION=${TRAVIS_TAG:-$TRAVIS_BRANCH}
-
-# jobs:
-#   include:
-#     - stage: build docker image
-#       script:
-#         - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-#         - echo "             IMAGE_VERSION -> ${IMAGE_VERSION}"
-#         - echo "             TRAVIS_BRANCH -> ${TRAVIS_BRANCH}"
-#         - echo "                TRAVIS_TAG -> ${TRAVIS_TAG}"
-#         - echo "TRAVIS_PULL_REQUEST_BRANCH -> ${TRAVIS_PULL_REQUEST_BRANCH}"
-#         - echo "   TRAVIS_PULL_REQUEST_SHA -> ${TRAVIS_PULL_REQUEST_SHA}"
-#         - echo "  TRAVIS_PULL_REQUEST_SLUG -> ${TRAVIS_PULL_REQUEST_SLUG}"
-#         - echo "             TRAVIS_JOB_ID -> ${TRAVIS_JOB_ID}"
-#         - echo "        TRAVIS_JOB_WEB_URL -> ${TRAVIS_JOB_WEB_URL}"
-#         - docker build -t ${IMAGE_BASE_NAME}-builder  -f Dockerfile.builder  .
-#         - docker build -t ${IMAGE_BASE_NAME}-api      -f apps/api/Dockerfile .
-#         - docker build -t ${IMAGE_BASE_NAME}-app      -f apps/app/Dockerfile .
-#         - docker images
-#         - docker tag ${IMAGE_BASE_NAME}-app ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:${IMAGE_VERSION}
-#         - docker tag ${IMAGE_BASE_NAME}-api ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-api:${IMAGE_VERSION}
-#         - docker push ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-api:${IMAGE_VERSION}
-#         - docker push ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:${IMAGE_VERSION}
-
 services:
   - docker
 
 env:
   global:
-    - IMAGE_BASE_NAME=webapp-api-docker-demo IMAGE_VERSION=${TRAVIS_TAG:-$TRAVIS_BRANCH}
+    - IMAGE_BASE_NAME=webapp-api-docker-demo
 
 before_script:
   - echo ${IMAGE_VERSION}
@@ -42,6 +14,7 @@ before_script:
   - echo ${TRAVIS_PULL_REQUEST_SLUG}
   - echo ${TRAVIS_JOB_ID}
   - echo ${TRAVIS_JOB_WEB_URL}
+  - echo ${IMAGE_BASE_NAME}
 script:
   - docker build -t ${IMAGE_BASE_NAME}-builder  -f Dockerfile.builder  .
   - docker build -t ${IMAGE_BASE_NAME}-api      -f apps/api/Dockerfile .
@@ -54,6 +27,7 @@ before_deploy:
   - export IMAGE_VERSION_TAG=${TRAVIS_TAG:-$TRAVIS_BRANCH}
   - export IMAGE_VERSION=${TRAVIS_PULL_REQUEST_BRANCH:-$IMAGE_VERSION_TAG}
   - export IS_LATEST=$([ "$IMAGE_VERSION" == "master" ] && echo 1 || echo 0)
+  - export IS_MASTER_OR_PR=$([ ! -z "${TRAVIS_PULL_REQUEST_SHA}" ] || [ "${TRAVIS_BRANCH}" == "master" ])
   - docker tag ${IMAGE_BASE_NAME}-app ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:${IMAGE_VERSION}
   - docker tag ${IMAGE_BASE_NAME}-api ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-api:${IMAGE_VERSION}
 deploy:
@@ -61,7 +35,7 @@ deploy:
   script:
     - docker push ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-api:${IMAGE_VERSION}
     - docker push ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:${IMAGE_VERSION}
-    - echo ${IMAGE_VERSION_TAG} ${IMAGE_VERSION} ${IS_LATEST}
+    - echo ${IMAGE_VERSION_TAG} ${IMAGE_VERSION} ${IS_LATEST} ${IS_MASTER_OR_PR}
     - >
       $IS_LATEST
       && docker tag ${IMAGE_BASE_NAME}-app ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:latest
@@ -69,6 +43,10 @@ deploy:
       && docker push ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-api:latest
       && docker push ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:latest
   skip-cleanup: true
+  on:
+    all_branches: true
+    # condition: ${TRAVIS_BRANCH} =~ ^(staging|production)$
+    condition: -z "${TRAVIS_PULL_REQUEST_SHA}"
   # on:
   #   tags: true
   #   branches:
