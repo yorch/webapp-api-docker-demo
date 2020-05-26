@@ -52,7 +52,7 @@ services:
       # Auth
       # - "traefik.http.routers.traefik-api-secured.middlewares=global-auth"
 
-  # This service is only as a helper for builder the image for App and API services, it wont actually run
+  # This service is only a helper for building the images for App and API services, it wont actually run
   builder:
     build:
       context: .
