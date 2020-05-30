@@ -9763,10 +9763,10 @@ ra-data-json-server@3.5.3:
     query-string "^5.1.1"
     ra-core "^3.5.3"
 
-ra-data-simple-rest@3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/ra-data-simple-rest/-/ra-data-simple-rest-3.3.2.tgz#cf64a830b88571af6f9ecfdeee96ec2501fa79ca"
-  integrity sha512-BaV3jGYaT0bLo1KkaC5nLt3FBxdhmv1lXItBT0oPkXfjnQgiMDIJkZIjvkOCJofDSW8L4M/Tkc2uQ5u+MBS81w==
+ra-data-simple-rest@3.5.5:
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/ra-data-simple-rest/-/ra-data-simple-rest-3.5.5.tgz#ecd23eacf6a0c3bc4c06239b56489eda86ab664d"
+  integrity sha512-9xMcWUAsoDtQFGA3PoTVg2Xqta/NNzrmIIxkRejxhlSWXLi2uGlG+MW//3FOyZdWK03AEq8wuQY6T2kRjZ8mGA==
   dependencies:
     query-string "^5.1.1"
 

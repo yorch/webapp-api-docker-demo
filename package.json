@@ -36,7 +36,7 @@
     "express": "4.17.1",
     "pg": "8.2.1",
     "ra-data-json-server": "3.5.3",
-    "ra-data-simple-rest": "3.3.2",
+    "ra-data-simple-rest": "3.5.5",
     "react": "16.13.1",
     "react-admin": "3.5.3",
     "react-dom": "16.13.1",
