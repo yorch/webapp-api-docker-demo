@@ -1,12 +1,12 @@
 import 'reflect-metadata';
-import { createConnection } from 'typeorm';
+import { createConnection, Connection } from 'typeorm';
 import { Actor, Film } from './entity';
 
 import { config } from './config';
 
 const { database } = config;
 
-export const setupDatabase = () =>
+export const setupDatabase = (): Promise<Connection> =>
   createConnection({
     type: 'postgres',
     host: database.host,
@@ -22,9 +22,8 @@ export const setupDatabase = () =>
     // synchronize: true,
     synchronize: false,
     logging: true,
-  })
-    .then((connection) => {
-      console.log('DB connection setup successfully!');
-      return connection;
-    })
-    .catch((error) => console.log(error));
+  }).then((connection) => {
+    console.log('DB connection setup successfully!');
+    return connection;
+  });
+// .catch((error) => console.log(error));

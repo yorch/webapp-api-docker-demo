@@ -10,4 +10,5 @@ import 'regenerator-runtime/runtime';
 // https://github.com/inspect-js/has-symbols/issues/6
 // https://github.com/inspect-js/has-symbols/issues/4
 // https://github.com/inspect-js/has-symbols/issues/11
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 (window as any).global = window;

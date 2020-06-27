@@ -9,13 +9,11 @@ import { MovieList } from './MovieList';
 // const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
 const dataProvider = simpleRestProvider(environment.apiBasePath);
 
-export const App = () => {
-  return (
-    <Admin dataProvider={dataProvider}>
-      <Resource name="actors" list={ActorList} />
-      <Resource name="movies" list={MovieList} />
-    </Admin>
-  );
-};
+export const App: React.FC = () => (
+  <Admin dataProvider={dataProvider}>
+    <Resource name="actors" list={ActorList} />
+    <Resource name="movies" list={MovieList} />
+  </Admin>
+);
 
 export default App;

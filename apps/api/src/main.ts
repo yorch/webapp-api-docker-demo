@@ -5,7 +5,7 @@ import { config } from './config';
 import { setupDatabase } from './database';
 import { setupRoutes } from './routes';
 
-const { domain, port } = config;
+const { port } = config;
 
 const app = express();
 
