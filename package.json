@@ -33,7 +33,7 @@
   "private": true,
   "dependencies": {
     "cors": "2.8.5",
-    "document-register-element": "1.14.3",
+    "document-register-element": "1.14.4",
     "express": "4.17.1",
     "pg": "8.3.0",
     "ra-data-json-server": "3.7.2",
