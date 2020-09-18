@@ -39,7 +39,7 @@
     "ra-data-json-server": "3.8.5",
     "ra-data-simple-rest": "3.8.3",
     "react": "16.13.1",
-    "react-admin": "3.8.4",
+    "react-admin": "3.8.5",
     "react-dom": "16.13.1",
     "reflect-metadata": "0.1.13",
     "styled-components": "5.2.0",
