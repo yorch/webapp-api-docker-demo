@@ -1631,7 +1631,7 @@
     yargs "15.4.1"
     yargs-parser "20.0.0"
 
-"@nrwl/cypress@10.3.0", "@nrwl/cypress@^10.3.0":
+"@nrwl/cypress@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-10.3.0.tgz#dee49ad95455b00a8e66782f1179373be73e3f5f"
   integrity sha512-5JkCkiXcbCQsy3atf0iqqTVkXekAfSP0H025eAwTSQX+TCdLEJAQfBy+EUlUQPunnJLj/bJEV/pq8OKIOqP6uw==
@@ -1650,7 +1650,7 @@
     webpack-node-externals "1.7.2"
     yargs-parser "20.0.0"
 
-"@nrwl/eslint-plugin-nx@^10.3.0":
+"@nrwl/eslint-plugin-nx@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-10.3.0.tgz#e5964a47f9d9d151aab69c679af9404415bfc1df"
   integrity sha512-CxpPsB+ydz1bdhYuihUHMZ10/mAC9QGhgUjMVZrkCvdgeyxNgqRmTPlxw+XGUjC6mWgep7omwLCrXnoy4WXHkQ==
@@ -1658,7 +1658,7 @@
     "@angular-devkit/core" "~10.1.3"
     "@typescript-eslint/experimental-utils" "^4.3.0"
 
-"@nrwl/express@^10.3.0":
+"@nrwl/express@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-10.3.0.tgz#2ae3694fd2bd9f2772f1fc8d564bccb527ccfbde"
   integrity sha512-YimCqeefIYl1ZFwuCPQLddCboUYmBdNRxIC26slGN37jDwaFN1kOlaqbUkmyUlKa0oISxN2sVXPshuvMn5Hq2A==
@@ -1667,7 +1667,7 @@
     "@nrwl/jest" "10.3.0"
     "@nrwl/node" "10.3.0"
 
-"@nrwl/jest@10.3.0", "@nrwl/jest@^10.3.0":
+"@nrwl/jest@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@nrwl/jest/-/jest-10.3.0.tgz#b30f11770ab144552ff025733f17b87772b21a51"
   integrity sha512-p7b/iUOdoC4n/1rCEthamkqlNAlk0anocwJfK9YiuWwZnNcV0xs15uEXltlv0Y3H+61wf4vTMG/FYmirVMOSwg==
@@ -1687,7 +1687,7 @@
     minimatch "3.0.4"
     tslib "^1.9.3"
 
-"@nrwl/node@10.3.0", "@nrwl/node@^10.3.0":
+"@nrwl/node@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-10.3.0.tgz#566b52a128333d6e642ac2fa2145c7777381b828"
   integrity sha512-HpiNZNyYDEp9RSdjm+T4dpk4rRbM9oPXQCerRmHHYtGmASrRIUreeTIKZ5ujkP3gl21Qp6r+v4rQOx40AFOuDw==
@@ -1711,7 +1711,7 @@
     webpack-merge "4.2.1"
     webpack-node-externals "1.7.2"
 
-"@nrwl/react@^10.3.0":
+"@nrwl/react@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@nrwl/react/-/react-10.3.0.tgz#4cd76e3ee91150e2fd17292a13ae74a89f96f7d9"
   integrity sha512-/f6/DTYMMPnhAtwNpH15x83bl3P0MuuPHcJMC8T2EP7NrxnrL3QAz7QGPD2e06kPxu0jT4cB/aJvQHkaDrM6Yw==
@@ -1747,7 +1747,7 @@
     tslib "^1.9.3"
     yargs-parser "20.0.0"
 
-"@nrwl/web@10.3.0", "@nrwl/web@^10.3.0":
+"@nrwl/web@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@nrwl/web/-/web-10.3.0.tgz#dd4d941dba488354ca90e61c3ecd80e9f254d158"
   integrity sha512-vtRwruuDP3pYqwBS9kjoinQQCLSMCu1IsHK5yir2rXaWsjDSk8QMtT5ENFW2W5dVs73N6egm93zBNXz3wsAecg==
@@ -1840,7 +1840,7 @@
     webpack-subresource-integrity "1.1.0-rc.6"
     worker-plugin "3.2.0"
 
-"@nrwl/workspace@^10.3.0":
+"@nrwl/workspace@10.3.0":
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/@nrwl/workspace/-/workspace-10.3.0.tgz#a1fd6dda5676387e8d8ea86a0f4dc4fed056ea14"
   integrity sha512-Q/GsxEMzNppSTAe9rzUNIxJm+5qn50KVVrbUkcUVMDLAW9JzCdELOAAXQf7wJuhAoUFu5ll1nHzjQ2iMGqREng==
@@ -2456,7 +2456,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^4.4.1":
+"@typescript-eslint/eslint-plugin@4.4.1":
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.4.1.tgz#b8acea0373bd2a388ac47df44652f00bf8b368f5"
   integrity sha512-O+8Utz8pb4OmcA+Nfi5THQnQpHSD2sDUNw9AxNHpuYOo326HZTtG8gsfT+EAYuVrFNaLyNb2QnUNkmTRDskuRA==
@@ -2481,7 +2481,7 @@
     eslint-scope "^5.0.0"
     eslint-utils "^2.0.0"
 
-"@typescript-eslint/parser@^4.4.1":
+"@typescript-eslint/parser@4.4.1":
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.4.1.tgz#25fde9c080611f303f2f33cedb145d2c59915b80"
   integrity sha512-S0fuX5lDku28Au9REYUsV+hdJpW/rNW0gWlc4SXzF/kdrRaAVX9YCxKpziH7djeWT/HFAjLZcnY7NJD8xTeUEg==
@@ -4719,7 +4719,7 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-cypress@^5.4.0:
+cypress@5.4.0:
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/cypress/-/cypress-5.4.0.tgz#8833a76e91129add601f823d43c53eb512d162c5"
   integrity sha512-BJR+u3DRSYMqaBS1a3l1rbh5AkMRHugbxcYYzkl+xYlO6dzcJVE8uAhghzVI/hxijCyBg1iuSe4TRp/g1PUg8Q==
@@ -5361,7 +5361,7 @@ escodegen@^1.14.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^6.13.0:
+eslint-config-prettier@6.13.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.13.0.tgz#207d88796b5624e5bb815bbbdfc5891ceb9ebffa"
   integrity sha512-LcT0i0LSmnzqK2t764pyIt7kKH2AuuqKRTtJTdddWxOiUja9HdG5GXBVF2gmCTvVYWVsTu8J2MhJLVGRh+pj8w==
