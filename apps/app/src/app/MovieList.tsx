@@ -1,7 +1,7 @@
 import React, { Props } from 'react';
-import { List, Datagrid, TextField } from 'react-admin';
+import { List, Datagrid, TextField, ResourceComponentProps } from 'react-admin';
 
-export const MovieList: React.FC<Props<unknown>> = (props) => (
+export const MovieList = (props: ResourceComponentProps) => (
   <List {...props} pagination={null}>
     <Datagrid>
       <TextField source="id" />
