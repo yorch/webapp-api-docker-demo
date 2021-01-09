@@ -10657,10 +10657,10 @@ querystringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
   integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
-ra-core@^3.11.1:
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.11.1.tgz#c50ae7f17c74e7fdc56e60483107ac08a34d2491"
-  integrity sha512-wV4nnG7RWUH2rNNdOyyjBDQH/sl/lHa7k52AHpRkto40n2VFCW8qC+fHtwT5Jj+GXg4cS81lYQaWfxE6xMFOfg==
+ra-core@^3.11.1, ra-core@^3.11.2:
+  version "3.11.2"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.11.2.tgz#22a6b93e093ddcbbb45f04904f74020c6c4d8fde"
+  integrity sha512-1oYCnXER5iSmEwHi3Hy2CkAuJXkC/6AjkJlVf0trnhzvUxkzusMOV9dm4ONyyrPDwGFc7oStNA793F7qNZbXog==
   dependencies:
     "@testing-library/react" "^8.0.7"
     classnames "~2.2.5"
@@ -10672,13 +10672,13 @@ ra-core@^3.11.1:
     query-string "^5.1.1"
     reselect "~3.0.0"
 
-ra-data-json-server@3.11.1:
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.11.1.tgz#68806db3a9b7c3279f699327ddc02f561421d514"
-  integrity sha512-s4JLMVA0cQUWTtpvojjWm95MPZCChkDeMhjJAI2AE6x+bMR1S/jrVVeLQTsSfCmcVRFSNt3u03amR5vCcS+tug==
+ra-data-json-server@3.11.2:
+  version "3.11.2"
+  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.11.2.tgz#b07471db79b00dab40c4484d09e4d8519170181a"
+  integrity sha512-Ff0BYy+LI10PpDpJ9YrL2Y2RXFdBhSSR0Db5Tx3c8jWfsD+khXbXEZFmvrdAhTEPwj8gHH4ftjPSXXTxvH9k2w==
   dependencies:
     query-string "^5.1.1"
-    ra-core "^3.11.1"
+    ra-core "^3.11.2"
 
 ra-data-simple-rest@3.10.4:
   version "3.10.4"
