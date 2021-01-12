@@ -1708,6 +1708,26 @@
     webpack-node-externals "1.7.2"
     yargs-parser "20.0.0"
 
+"@nrwl/cypress@11.1.2":
+  version "11.1.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-11.1.2.tgz#ea69329e128b73585e4b38869cdaf34fd64f7b28"
+  integrity sha512-6bLpxvaU9bY1GKE+9OxAiAGTg7g4S8At/qr7ZsDIwxtpaI3F4g6NPypHfBUzUPAcw81mKqYqTIUdQkdWHdqSaw==
+  dependencies:
+    "@angular-devkit/architect" "~0.1100.1"
+    "@angular-devkit/core" "~11.0.1"
+    "@angular-devkit/schematics" "~11.0.1"
+    "@cypress/webpack-preprocessor" "~4.1.2"
+    "@nrwl/devkit" "11.1.2"
+    fork-ts-checker-webpack-plugin "^3.1.1"
+    fs-extra "7.0.1"
+    rxjs "^6.5.4"
+    tree-kill "1.2.2"
+    ts-loader "5.4.5"
+    tsconfig-paths-webpack-plugin "3.2.0"
+    tslib "^2.0.0"
+    webpack-node-externals "1.7.2"
+    yargs-parser "20.0.0"
+
 "@nrwl/devkit@11.1.1":
   version "11.1.1"
   resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-11.1.1.tgz#00de05287e09293e5f0270a4cfe6dc186b7c99ad"
