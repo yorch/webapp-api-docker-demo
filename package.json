@@ -54,7 +54,7 @@
     "@nrwl/jest": "11.1.1",
     "@nrwl/node": "11.1.2",
     "@nrwl/react": "11.1.2",
-    "@nrwl/web": "11.1.1",
+    "@nrwl/web": "11.1.2",
     "@nrwl/workspace": "10.3.1",
     "@testing-library/react": "11.2.3",
     "@types/express": "4.17.10",
