@@ -10561,7 +10561,7 @@ querystringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
   integrity sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==
 
-ra-core@^3.11.3, ra-core@^3.11.4:
+ra-core@^3.11.4:
   version "3.11.4"
   resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.11.4.tgz#7f4d1366f1e94a72a30bdbff69e33e02560a29af"
   integrity sha512-9DgEHb16p3guMLfhX12fGL+1qkNTZnWl+ew58abMuSxNM4yICbJaXWSGJFy9fiaafjA8lxxEo0j3C0WfxgUyNw==
@@ -10576,13 +10576,13 @@ ra-core@^3.11.3, ra-core@^3.11.4:
     query-string "^5.1.1"
     reselect "~3.0.0"
 
-ra-data-json-server@3.11.3:
-  version "3.11.3"
-  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.11.3.tgz#1041403f0de860d01d57921a2212ff65d12bf37e"
-  integrity sha512-rEnCrROzqK5cjLAnbeQ7uNMjxziu8cZ0f/60WYpQcWBV34/cEbuPdhfowy4YLpRgJbT9MTprqSh6lFxFf8+pDw==
+ra-data-json-server@3.11.4:
+  version "3.11.4"
+  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.11.4.tgz#c8e3992cb680289b0d83869f058f473abda44090"
+  integrity sha512-rTLaNF4HOseDNkPcpPYwUy5YqD49Vz7T1xO0YY6ZhRO/t/L3c+o1WOY4GOXuRXpSCe1+n4UFo0zMVoUB79JVCQ==
   dependencies:
     query-string "^5.1.1"
-    ra-core "^3.11.3"
+    ra-core "^3.11.4"
 
 ra-data-simple-rest@3.10.4:
   version "3.10.4"
