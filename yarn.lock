@@ -1581,12 +1581,12 @@
     puka "^1.0.1"
     read-package-json-fast "^1.1.3"
 
-"@nrwl/cli@11.1.5":
-  version "11.1.5"
-  resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-11.1.5.tgz#1aca492a42e87b2e7ba451c95843b63eb34b4095"
-  integrity sha512-iqL1fMZZVSWZF3zc0spkpMlwT4CA/QI+b/K+VlYGxa63cjhX2cheorKbKnc4sQL23k7plBHZQyoYOWSR4GEUlw==
+"@nrwl/cli@11.2.0":
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-11.2.0.tgz#49d8ef4885a510bf6386716e26f0a01af1642b8e"
+  integrity sha512-beWhZrNnWlRr75mG05fky6SALHsF+/fv85rb43/ERUtIvFB1QcUBLhBIBZ6gdN8znY6BuuDRkD51rorEpbCVBg==
   dependencies:
-    "@nrwl/tao" "11.1.5"
+    "@nrwl/tao" "11.2.0"
     chalk "4.1.0"
     tmp "0.0.33"
     yargs "15.4.1"
@@ -1913,16 +1913,15 @@
     webpack-subresource-integrity "^1.5.1"
     worker-plugin "3.2.0"
 
-"@nrwl/workspace@11.1.5":
-  version "11.1.5"
-  resolved "https://registry.yarnpkg.com/@nrwl/workspace/-/workspace-11.1.5.tgz#8ecaa19cca6459cf733487ac253804570a7a230e"
-  integrity sha512-3eCcNbyQ/bEgSr9jHdy1sXp1yQOycLk5gu9p5l/QFirl3X6/rtoq48ko4ZYZm0fbfuQiKw359bYYRwQShDi0yg==
+"@nrwl/workspace@11.2.0":
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/workspace/-/workspace-11.2.0.tgz#1a158d5adc3dfc4aff775485bd7e4155811e9ad1"
+  integrity sha512-nkj+rEoFoY4QLDY/Gu8ZOfvZlAK9hqXwIZrkmXFomb1QZf2kAOMwmzpyv1yA/9y8/J9mdv0R3rP5eghhiPWy3g==
   dependencies:
-    "@angular-devkit/architect" "~0.1100.1"
-    "@angular-devkit/core" "~11.0.1"
-    "@angular-devkit/schematics" "~11.0.1"
-    "@nrwl/cli" "11.1.5"
-    "@nrwl/devkit" "11.1.5"
+    "@nrwl/cli" "11.2.0"
+    "@nrwl/devkit" "11.2.0"
+    "@nrwl/jest" "11.2.0"
+    "@nrwl/linter" "11.2.0"
     axios "0.21.1"
     chalk "4.1.0"
     cosmiconfig "^4.0.0"
