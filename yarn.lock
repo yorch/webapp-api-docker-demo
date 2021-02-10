@@ -1611,6 +1611,18 @@
     webpack-node-externals "1.7.2"
     yargs-parser "20.0.0"
 
+"@nrwl/devkit@11.2.11":
+  version "11.2.11"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-11.2.11.tgz#666b1e808045a5de7abffc6341a410d75d2adb81"
+  integrity sha512-qNNxBRclLH4ELRJ8ppLvogFMOGRDoOp21D6pn/svstWb3KmUvPF6cb0J/5vNiR5Vejz/mh2hThZbYbuOTclI8w==
+  dependencies:
+    "@nrwl/tao" "11.2.11"
+    ejs "^3.1.5"
+    ignore "^5.0.4"
+    semver "6.3.0"
+    strip-json-comments "2.0.1"
+    tslib "^2.0.0"
+
 "@nrwl/devkit@11.2.6":
   version "11.2.6"
   resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-11.2.6.tgz#cac1ccf8351898cd96b48eb11a834cf7846d5fb6"
@@ -1623,12 +1635,12 @@
     strip-json-comments "2.0.1"
     tslib "^2.0.0"
 
-"@nrwl/eslint-plugin-nx@11.2.6":
-  version "11.2.6"
-  resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-11.2.6.tgz#29bcdda95adb22dcc3bb07adb6429f020f677e4b"
-  integrity sha512-F8EfeOJMLChVDScKWwLZrNbu9DAk0CIGxpR72N7mmeXdsyIuZGGo6JNCseVYhrqQjUaK+fQYFKNVcm/D02jyIw==
+"@nrwl/eslint-plugin-nx@11.2.11":
+  version "11.2.11"
+  resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-11.2.11.tgz#09a9d91a8f452fb5bb8bef5408e44ee0a071f344"
+  integrity sha512-NlAPrSY+AAhFTw/R0CS+Pr7Ig8KSvcYDOun1OnMqBLOzeoOJZ/aPXr6gXZyjqwEzJI9aF4GbOUE/jQg9lW4r8A==
   dependencies:
-    "@nrwl/devkit" "11.2.6"
+    "@nrwl/devkit" "11.2.11"
     "@typescript-eslint/experimental-utils" "^4.3.0"
     confusing-browser-globals "^1.0.9"
 
@@ -1712,6 +1724,26 @@
     eslint-plugin-react "^7.18.3"
     eslint-plugin-react-hooks "^2.4.0"
     url-loader "^3.0.0"
+
+"@nrwl/tao@11.2.11":
+  version "11.2.11"
+  resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-11.2.11.tgz#fbf3ee2fc5216582f766b675c0e10627453e021a"
+  integrity sha512-tIj63wxpT3mRKg+GePzjWzOWss+tqW8c85UW5ko0pZWQqEo1JCrcW9Tc59eveCdr89tF9mApMlGpuS6YH9yI0A==
+  dependencies:
+    "@angular-devkit/architect" "~0.1100.1"
+    "@angular-devkit/core" "~11.0.1"
+    "@angular-devkit/schematics" "~11.0.1"
+    chalk "4.1.0"
+    fs-extra "7.0.1"
+    inquirer "^6.3.1"
+    minimist "^1.2.5"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    semver "6.3.0"
+    strip-json-comments "2.0.1"
+    tmp "0.0.33"
+    tslib "^2.0.0"
+    yargs-parser "20.0.0"
 
 "@nrwl/tao@11.2.6":
   version "11.2.6"
