@@ -1637,12 +1637,24 @@
     strip-json-comments "2.0.1"
     tslib "^2.0.0"
 
-"@nrwl/eslint-plugin-nx@11.2.12":
-  version "11.2.12"
-  resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-11.2.12.tgz#36616d449d13616d6c2c5c3c7c530ea7931daaa7"
-  integrity sha512-pjyxrCk+a2GONfDuuPFo/QLOJM1rtXL87oIJcfQFuCLslAJUMDbJ9AImmjuzvFYgA+eUxvvocFlGiqWgH/7u9w==
+"@nrwl/devkit@11.3.0":
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-11.3.0.tgz#4a1adbca561755ce4dcb73ea4a7cec91e504be06"
+  integrity sha512-+01nunqs9PZdKK/iERizM9jZ0p+5W3a9+tuA4eT7zIsl9mYaPhxq2cSF3pDWqFZwpkFuxeK4MoLIpFXoP4ZGnA==
   dependencies:
-    "@nrwl/devkit" "11.2.12"
+    "@nrwl/tao" "11.3.0"
+    ejs "^3.1.5"
+    ignore "^5.0.4"
+    semver "6.3.0"
+    strip-json-comments "2.0.1"
+    tslib "^2.0.0"
+
+"@nrwl/eslint-plugin-nx@11.3.0":
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-11.3.0.tgz#8e9b601b93407f8e912a741bbbcb3db79ac00d1e"
+  integrity sha512-SpyFApwKDs2nNzXeTf5qZhqR/7uxDSGEu8i5/yGiZUL3IQ6dadNnAePYzwtz4P4kkS5mZ9H1r2D5VNGis/p3AA==
+  dependencies:
+    "@nrwl/devkit" "11.3.0"
     "@typescript-eslint/experimental-utils" "^4.3.0"
     confusing-browser-globals "^1.0.9"
 
@@ -1735,6 +1747,23 @@
     "@angular-devkit/architect" "~0.1100.1"
     "@angular-devkit/core" "~11.0.1"
     "@angular-devkit/schematics" "~11.0.1"
+    chalk "4.1.0"
+    fs-extra "7.0.1"
+    inquirer "^6.3.1"
+    minimist "^1.2.5"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    semver "6.3.0"
+    strip-json-comments "2.0.1"
+    tmp "0.0.33"
+    tslib "^2.0.0"
+    yargs-parser "20.0.0"
+
+"@nrwl/tao@11.3.0":
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-11.3.0.tgz#e9ef2a9c26c9046297c6617fe1f51dad3f9f5102"
+  integrity sha512-306Dq8gBPdCQhoHKUSz5XpRQoQwXQNhUWPRs9G+8srOwxdvydXkQijUK5FQqEPOYxRx8K4Xx8Ffcb5k7m9+AHA==
+  dependencies:
     chalk "4.1.0"
     fs-extra "7.0.1"
     inquirer "^6.3.1"
