@@ -1,6 +1,8 @@
 {
   "recommendations": [
-    "ms-vscode.vscode-typescript-tslint-plugin",
-    "esbenp.prettier-vscode"
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "irongeek.vscode-env",
+    "ms-vscode.vscode-typescript-tslint-plugin"
   ]
 }
