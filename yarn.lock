@@ -1626,6 +1626,18 @@
     strip-json-comments "2.0.1"
     tslib "^2.0.0"
 
+"@nrwl/devkit@11.6.1":
+  version "11.6.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-11.6.1.tgz#ee987db554b7842fedbd8fbe982e96746946993f"
+  integrity sha512-kzZoKEAmxrTcXhb0B/lH662DYj/GINjP3leL09fUMA1qnNgNuf78YE3dIEopT30qMHUA3X5sXJbuVs4dPDIk+Q==
+  dependencies:
+    "@nrwl/tao" "11.6.1"
+    ejs "^3.1.5"
+    ignore "^5.0.4"
+    semver "7.3.4"
+    strip-json-comments "2.0.1"
+    tslib "^2.0.0"
+
 "@nrwl/eslint-plugin-nx@11.5.2":
   version "11.5.2"
   resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-11.5.2.tgz#552a0b6f31c613412f8e9b7d293ddfed59fd3a40"
@@ -1653,6 +1665,17 @@
   integrity sha512-XXJboEUHiL25NGh3pHa1WIruSjIhYicsGG/vQHc+NB6BJKoWAsqzuldcC04uAq1baIefpU30oi38ya4zsb0grw==
   dependencies:
     "@nrwl/devkit" "11.5.2"
+    jest-resolve "^26.6.2"
+    rxjs "^6.5.4"
+    strip-json-comments "2.0.1"
+    tslib "^2.0.0"
+
+"@nrwl/jest@11.6.1":
+  version "11.6.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/jest/-/jest-11.6.1.tgz#497454dc788cab6a7dbbbaf85e6a50abe6ce9681"
+  integrity sha512-yM4Icg8k3Gfq2mFF9OSnojhwmmH6u/1Xk5dLCAhBwbSZcne/FlOTbca45QddO7YboADqx2WV5fFS5bB8kHdIBw==
+  dependencies:
+    "@nrwl/devkit" "11.6.1"
     jest-resolve "^26.6.2"
     rxjs "^6.5.4"
     strip-json-comments "2.0.1"
@@ -1746,6 +1769,23 @@
     rxjs "^6.5.4"
     rxjs-for-await "0.0.2"
     semver "6.3.0"
+    strip-json-comments "2.0.1"
+    tmp "0.0.33"
+    tslib "^2.0.0"
+    yargs-parser "20.0.0"
+
+"@nrwl/tao@11.6.1":
+  version "11.6.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-11.6.1.tgz#e7ed7fac6abed35cdc83ff3e9380c56c286d948f"
+  integrity sha512-I4BA1N64nGmWmy4uTavXlgcVA3zcmW2GhUCBdoQ1PF/Y2c50aF2r+erleH8ZzF3F8JHqwsCLHeBG+bzry1OhwQ==
+  dependencies:
+    chalk "4.1.0"
+    fs-extra "7.0.1"
+    inquirer "^6.3.1"
+    minimist "^1.2.5"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    semver "7.3.4"
     strip-json-comments "2.0.1"
     tmp "0.0.33"
     tslib "^2.0.0"
@@ -8730,7 +8770,6 @@ minipass-fetch@^1.3.0, minipass-fetch@^1.3.2:
   resolved "https://registry.yarnpkg.com/minipass-fetch/-/minipass-fetch-1.3.3.tgz#34c7cea038c817a8658461bf35174551dce17a0a"
   integrity sha512-akCrLDWfbdAWkMLBxJEeWTdNsjML+dt5YgOI4gJ53vuO0vrmYQkUPxa6j6V65s9CcePIr2SSWqjT2EcrNseryQ==
   dependencies:
-    encoding "^0.1.12"
     minipass "^3.1.0"
     minipass-sized "^1.0.3"
     minizlib "^2.0.0"
@@ -11434,6 +11473,13 @@ semver@7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.0.0.tgz#5f3ca35761e47e05b206c6daff2cf814f0316b8e"
   integrity sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==
+
+semver@7.3.4:
+  version "7.3.4"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.4.tgz#27aaa7d2e4ca76452f98d3add093a72c943edc97"
+  integrity sha512-tCfb2WLjqFAtXn4KEdxIhalnRtoKFN7nAwj0B3ZXCbQloV2tq5eDbcTmT68JJD3nRJq24/XgxtQKFIpQdtvmVw==
+  dependencies:
+    lru-cache "^6.0.0"
 
 semver@7.x, semver@^7.1.1, semver@^7.2.1, semver@^7.3.2, semver@^7.3.4:
   version "7.3.5"
