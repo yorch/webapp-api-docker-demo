@@ -2,12 +2,12 @@ version: '3.7'
 
 services:
   traefik:
-    image: traefik:v2.1
+    image: traefik:v2.4
     container_name: traefik2
     restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
+      - '80:80'
+      - '443:443'
     volumes:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock
@@ -15,45 +15,45 @@ services:
       - ./logs/traefik:/opt/logs
     command:
       # Dashboard
-      - "--api" # Enables the web UI
-      - "--global.sendanonymoususage=false"
+      - '--api' # Enables the web UI
+      - '--global.sendanonymoususage=false'
       # Entrypoints
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.web-secured.address=:443"
+      - '--entrypoints.web.address=:80'
+      - '--entrypoints.web-secured.address=:443'
       # Let's Encrypt
-      - "--certificatesResolvers.webcert.acme.email=${ACME_EMAIL?Variable ACME_EMAIL not set}"
-      - "--certificatesResolvers.webcert.acme.tlschallenge=true"
-      - "--certificatesResolvers.webcert.acme.storage=/opt/traefik/acme.json"
+      - '--certificatesResolvers.webcert.acme.email=${ACME_EMAIL?Variable ACME_EMAIL not set}'
+      - '--certificatesResolvers.webcert.acme.tlschallenge=true'
+      - '--certificatesResolvers.webcert.acme.storage=/opt/traefik/acme.json'
       # Docker Provider
-      - "--providers.docker" # Tells Traefik to listen to docker
-      - "--providers.docker.exposedbydefault=false"
-      - "--providers.docker.watch"
+      - '--providers.docker' # Tells Traefik to listen to docker
+      - '--providers.docker.exposedbydefault=false'
+      - '--providers.docker.watch'
       # Logging
-      - "--accesslog"
-      - "--log"
-      - "--log.level=${TRAEFIK_LOG_LEVEL:-INFO}"
+      - '--accesslog'
+      - '--log'
+      - '--log.level=${TRAEFIK_LOG_LEVEL:-INFO}'
     labels:
-      - "traefik.enable=true"
+      - 'traefik.enable=true'
       # Global Middlewares
-      - "traefik.http.middlewares.global-redirectscheme.redirectscheme.scheme=https"
+      - 'traefik.http.middlewares.global-redirectscheme.redirectscheme.scheme=https'
       # - "traefik.http.middlewares.global-auth.basicauth.users=${USERNAME?Variable USERNAME not set}:${HASHED_PASSWORD?Variable HASHED_PASSWORD not set}"
       # HTTP Host
-      - "traefik.http.routers.traefik-api.rule=Host(`traefik.${DOMAIN?Variable DOMAIN not set}`)"
-      - "traefik.http.routers.traefik-api.entrypoints=web"
-      - "traefik.http.routers.traefik-api.service=api@internal"
+      - 'traefik.http.routers.traefik-api.rule=Host(`traefik.${DOMAIN?Variable DOMAIN not set}`)'
+      - 'traefik.http.routers.traefik-api.entrypoints=web'
+      - 'traefik.http.routers.traefik-api.service=api@internal'
       # Redirects to HTTPS
-      - "traefik.http.routers.traefik-api.middlewares=global-redirectscheme"
+      - 'traefik.http.routers.traefik-api.middlewares=global-redirectscheme'
       # HTTPS Host
-      - "traefik.http.routers.traefik-api-secured.rule=Host(`traefik.${DOMAIN}`)"
-      - "traefik.http.routers.traefik-api-secured.entrypoints=web-secured"
-      - "traefik.http.routers.traefik-api-secured.tls=true"
-      - "traefik.http.routers.traefik-api-secured.tls.certResolver=webcert"
-      - "traefik.http.routers.traefik-api-secured.service=api@internal"
+      - 'traefik.http.routers.traefik-api-secured.rule=Host(`traefik.${DOMAIN}`)'
+      - 'traefik.http.routers.traefik-api-secured.entrypoints=web-secured'
+      - 'traefik.http.routers.traefik-api-secured.tls=true'
+      - 'traefik.http.routers.traefik-api-secured.tls.certResolver=webcert'
+      - 'traefik.http.routers.traefik-api-secured.service=api@internal'
       # Auth
       # - "traefik.http.routers.traefik-api-secured.middlewares=global-auth"
 
   api:
-    image: node:12-alpine
+    image: node:16-alpine
     restart: unless-stopped
     depends_on:
       - postgres
@@ -63,19 +63,19 @@ services:
     env_file: .env
     command: node /app/main.js
     labels:
-      - "traefik.enable=true"
+      - 'traefik.enable=true'
       # HTTP Host
-      - "traefik.http.routers.api.rule=Host(`${API_SUBDOMAIN?Variable API_SUBDOMAIN not set}.${DOMAIN}`)"
-      - "traefik.http.routers.api.entrypoints=web"
+      - 'traefik.http.routers.api.rule=Host(`${API_SUBDOMAIN?Variable API_SUBDOMAIN not set}.${DOMAIN}`)'
+      - 'traefik.http.routers.api.entrypoints=web'
       # Redirects to HTTPS
-      - "traefik.http.routers.api.middlewares=global-redirectscheme"
+      - 'traefik.http.routers.api.middlewares=global-redirectscheme'
       # HTTPS Host
-      - "traefik.http.routers.api-secured.rule=Host(`${API_SUBDOMAIN}.${DOMAIN}`)"
-      - "traefik.http.routers.api-secured.entrypoints=web-secured"
-      - "traefik.http.routers.api-secured.tls=true"
-      - "traefik.http.routers.api-secured.tls.certResolver=webcert"
-      - "traefik.http.routers.api-secured.service=api-secured"
-      - "traefik.http.services.api-secured.loadbalancer.server.port=${SERVER_PORT?Variable SERVER_PORT not set}"
+      - 'traefik.http.routers.api-secured.rule=Host(`${API_SUBDOMAIN}.${DOMAIN}`)'
+      - 'traefik.http.routers.api-secured.entrypoints=web-secured'
+      - 'traefik.http.routers.api-secured.tls=true'
+      - 'traefik.http.routers.api-secured.tls.certResolver=webcert'
+      - 'traefik.http.routers.api-secured.service=api-secured'
+      - 'traefik.http.services.api-secured.loadbalancer.server.port=${SERVER_PORT?Variable SERVER_PORT not set}'
 
   app:
     image: nginx:1.17-alpine
@@ -84,49 +84,49 @@ services:
       - ./dist/apps/app:/usr/share/nginx/html
       - ./logs/app:/var/log/nginx
     labels:
-      - "traefik.enable=true"
+      - 'traefik.enable=true'
       # Middlewares
-      - "traefik.http.middlewares.www-redirectregex.redirectregex.regex=^https?://${DOMAIN}/(.*)"
-      - "traefik.http.middlewares.www-redirectregex.redirectregex.replacement=https://www.${DOMAIN}/$${1}"
+      - 'traefik.http.middlewares.www-redirectregex.redirectregex.regex=^https?://${DOMAIN}/(.*)'
+      - 'traefik.http.middlewares.www-redirectregex.redirectregex.replacement=https://www.${DOMAIN}/$${1}'
       # Non www Host
-      - "traefik.http.routers.app-non-www.rule=Host(`${DOMAIN}`)"
-      - "traefik.http.routers.app-non-www.entrypoints=web"
-      - "traefik.http.routers.app-non-www.middlewares=www-redirectregex"
+      - 'traefik.http.routers.app-non-www.rule=Host(`${DOMAIN}`)'
+      - 'traefik.http.routers.app-non-www.entrypoints=web'
+      - 'traefik.http.routers.app-non-www.middlewares=www-redirectregex'
       # HTTP Host
-      - "traefik.http.routers.app.rule=Host(`www.${DOMAIN}`)"
-      - "traefik.http.routers.app.entrypoints=web"
+      - 'traefik.http.routers.app.rule=Host(`www.${DOMAIN}`)'
+      - 'traefik.http.routers.app.entrypoints=web'
       # Redirects to HTTPS
-      - "traefik.http.routers.app.middlewares=global-redirectscheme"
-      - "traefik.http.routers.app-non-www.middlewares=global-redirectscheme"
-      - "traefik.http.routers.app.middlewares=www-redirectregex"
+      - 'traefik.http.routers.app.middlewares=global-redirectscheme'
+      - 'traefik.http.routers.app-non-www.middlewares=global-redirectscheme'
+      - 'traefik.http.routers.app.middlewares=www-redirectregex'
       # HTTPS Host
-      - "traefik.http.routers.app-secured-non-www.rule=Host(`${DOMAIN}`)"
-      - "traefik.http.routers.app-secured-non-www.entrypoints=web-secured"
-      - "traefik.http.routers.app-secured-non-www.tls=true"
-      - "traefik.http.routers.app-secured-non-www.tls.certResolver=webcert"
-      - "traefik.http.routers.app-secured-non-www.middlewares=www-redirectregex"
+      - 'traefik.http.routers.app-secured-non-www.rule=Host(`${DOMAIN}`)'
+      - 'traefik.http.routers.app-secured-non-www.entrypoints=web-secured'
+      - 'traefik.http.routers.app-secured-non-www.tls=true'
+      - 'traefik.http.routers.app-secured-non-www.tls.certResolver=webcert'
+      - 'traefik.http.routers.app-secured-non-www.middlewares=www-redirectregex'
       # HTTPS Host
-      - "traefik.http.routers.app-secured.rule=Host(`www.${DOMAIN}`)"
-      - "traefik.http.routers.app-secured.entrypoints=web-secured"
-      - "traefik.http.routers.app-secured.tls=true"
-      - "traefik.http.routers.app-secured.tls.certResolver=webcert"
+      - 'traefik.http.routers.app-secured.rule=Host(`www.${DOMAIN}`)'
+      - 'traefik.http.routers.app-secured.entrypoints=web-secured'
+      - 'traefik.http.routers.app-secured.tls=true'
+      - 'traefik.http.routers.app-secured.tls.certResolver=webcert'
 
   adminer:
     image: adminer
     depends_on:
-      - "postgres"
+      - 'postgres'
     labels:
-      - "traefik.enable=true"
+      - 'traefik.enable=true'
       # HTTP Host
-      - "traefik.http.routers.adminer.rule=Host(`adminer.${DOMAIN}`)"
-      - "traefik.http.routers.adminer.entrypoints=web"
+      - 'traefik.http.routers.adminer.rule=Host(`adminer.${DOMAIN}`)'
+      - 'traefik.http.routers.adminer.entrypoints=web'
       # Redirects to HTTPS
-      - "traefik.http.routers.adminer.middlewares=global-redirectscheme"
+      - 'traefik.http.routers.adminer.middlewares=global-redirectscheme'
       # HTTPS Host
-      - "traefik.http.routers.adminer-secured.rule=Host(`adminer.${DOMAIN}`)"
-      - "traefik.http.routers.adminer-secured.entrypoints=web-secured"
-      - "traefik.http.routers.adminer-secured.tls=true"
-      - "traefik.http.routers.adminer-secured.tls.certResolver=webcert"
+      - 'traefik.http.routers.adminer-secured.rule=Host(`adminer.${DOMAIN}`)'
+      - 'traefik.http.routers.adminer-secured.entrypoints=web-secured'
+      - 'traefik.http.routers.adminer-secured.tls=true'
+      - 'traefik.http.routers.adminer-secured.tls.certResolver=webcert'
 
   postgres:
     image: postgres

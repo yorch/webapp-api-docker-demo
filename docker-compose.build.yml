@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   builder:
-    image: node:12
+    image: node:16
     volumes:
       # - node_modules:/app/node_modules
       - .:/app
