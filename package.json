@@ -52,7 +52,7 @@
     "@nrwl/eslint-plugin-nx": "11.5.2",
     "@nrwl/express": "12.2.0",
     "@nrwl/jest": "12.3.1",
-    "@nrwl/node": "12.2.0",
+    "@nrwl/node": "12.3.1",
     "@nrwl/react": "11.5.2",
     "@nrwl/web": "11.5.2",
     "@nrwl/workspace": "12.2.0",
