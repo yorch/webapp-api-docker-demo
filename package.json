@@ -51,7 +51,7 @@
     "@nrwl/cypress": "12.3.1",
     "@nrwl/eslint-plugin-nx": "12.3.1",
     "@nrwl/express": "12.3.1",
-    "@nrwl/jest": "12.3.1",
+    "@nrwl/jest": "12.3.4",
     "@nrwl/node": "12.3.1",
     "@nrwl/react": "12.3.1",
     "@nrwl/web": "12.3.1",
