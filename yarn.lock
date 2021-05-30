@@ -5075,15 +5075,15 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
+dotenv@10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-10.0.0.tgz#3d4227b8fb95f81096cdd2b66653fb2c7085ba81"
+  integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
+
 dotenv@8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
-
-dotenv@9.0.2:
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-9.0.2.tgz#dacc20160935a37dea6364aa1bef819fb9b6ab05"
-  integrity sha512-I9OvvrHp4pIARv4+x9iuewrWycX6CcZtoAu1XrzPxc5UygMJXJZYmBsynku8IkrJwgypE5DGNjDPmPRhDCptUg==
 
 dotenv@^8.2.0:
   version "8.6.0"
@@ -10339,7 +10339,7 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-ra-core@^3.15.1, ra-core@^3.15.2:
+ra-core@^3.15.2:
   version "3.15.2"
   resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.15.2.tgz#a1e66d50d028554e4cf6562ad132480837d64f59"
   integrity sha512-Ba7+j/g3deKj7AgFn0BItC3jDfmpwzojG+v2QlJKx5k9WOf6yu3ZRjBbArn3RVziap4WYmsDYCQPxORC/wWIHA==
@@ -10353,13 +10353,13 @@ ra-core@^3.15.1, ra-core@^3.15.2:
     query-string "^5.1.1"
     reselect "~3.0.0"
 
-ra-data-json-server@3.15.1:
-  version "3.15.1"
-  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.15.1.tgz#2d74adfc245c02b61237c5c9e24a18bb9094c803"
-  integrity sha512-OBBJu4XJJU3sVKYH7nxAcpXRmhvRfGhuMtV0qPmA6O1c94AR3gdnbUe7ekHP68aJ9PSAPa33RWkpS2nT85gWBA==
+ra-data-json-server@3.15.2:
+  version "3.15.2"
+  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.15.2.tgz#966735b93eaeb815c79eda0680d1a085ceb9e799"
+  integrity sha512-IDIEU1G1V65jhp9MsVfCpO63oxMWcOFt4hy8ZZDYmnA84k/253wvnViDq/4a79zI5V/0fhZXmggOC0NkR9WwWw==
   dependencies:
     query-string "^5.1.1"
-    ra-core "^3.15.1"
+    ra-core "^3.15.2"
 
 ra-data-simple-rest@3.13.4:
   version "3.13.4"
