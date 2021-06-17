@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "7.13.13",
-    "@nrwl/cypress": "12.3.5",
+    "@nrwl/cypress": "12.4.0",
     "@nrwl/eslint-plugin-nx": "12.3.5",
     "@nrwl/express": "12.3.5",
     "@nrwl/jest": "12.3.5",
