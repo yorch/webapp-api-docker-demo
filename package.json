@@ -47,7 +47,7 @@
     "winston": "3.3.3"
   },
   "devDependencies": {
-    "@babel/preset-react": "7.13.13",
+    "@babel/preset-react": "7.14.5",
     "@nrwl/cypress": "12.5.0",
     "@nrwl/eslint-plugin-nx": "12.5.0",
     "@nrwl/express": "12.5.0",
