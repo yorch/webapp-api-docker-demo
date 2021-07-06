@@ -1652,6 +1652,17 @@
     semver "7.3.4"
     tslib "^2.0.0"
 
+"@nrwl/devkit@12.5.6":
+  version "12.5.6"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-12.5.6.tgz#e7fde2ff32b69606546cd232047f5805efbcd27a"
+  integrity sha512-TKX60PJv7iXpBDejyIdDzOvsrnoAYg0CunkRgwSa9GoaAUrbPeZDCmjCzDR571DlD2uoLlCkHNjABd83gTtFug==
+  dependencies:
+    "@nrwl/tao" "12.5.6"
+    ejs "^3.1.5"
+    ignore "^5.0.4"
+    semver "7.3.4"
+    tslib "^2.0.0"
+
 "@nrwl/eslint-plugin-nx@12.5.0":
   version "12.5.0"
   resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-12.5.0.tgz#dd6bedd6f3bbd4ccd730bbacdc5d2b29024ff211"
@@ -1678,6 +1689,16 @@
   integrity sha512-o+wshr+HUA0g2GGOIHDrF74fxyYVizWH2mTpKqMSk28+DfpQ7u9NWe6PUqeX6IrF67Ypx0uNrNPbnpXThv7XqQ==
   dependencies:
     "@nrwl/devkit" "12.5.0"
+    jest-resolve "^26.6.2"
+    rxjs "^6.5.4"
+    tslib "^2.0.0"
+
+"@nrwl/jest@12.5.6":
+  version "12.5.6"
+  resolved "https://registry.yarnpkg.com/@nrwl/jest/-/jest-12.5.6.tgz#c024454e164384bb59552298de6551e206a4f5e2"
+  integrity sha512-4a4tul/eg7rLbxGgetVN0xUeqFlID30QoAwY1KNTT6XxSu0snVF+YS7M+4iUFzWGgdyfhBCA1Us1YT3c6pgMVg==
+  dependencies:
+    "@nrwl/devkit" "12.5.6"
     jest-resolve "^26.6.2"
     rxjs "^6.5.4"
     tslib "^2.0.0"
@@ -1760,6 +1781,22 @@
   version "12.5.0"
   resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-12.5.0.tgz#fc1f20de507a5500b6a6a7f52cafee166f3bcde2"
   integrity sha512-qX4cPkx20msOukdI+SdDbG/Qhm4ARbr4iNOdcHY8ZxuQaG4U6wo/GBwa/A+2tFnsHZegtPnvoNmEW137P3goNw==
+  dependencies:
+    chalk "4.1.0"
+    enquirer "~2.3.6"
+    fs-extra "^9.1.0"
+    jsonc-parser "3.0.0"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    semver "7.3.4"
+    tmp "~0.2.1"
+    tslib "^2.0.0"
+    yargs-parser "20.0.0"
+
+"@nrwl/tao@12.5.6":
+  version "12.5.6"
+  resolved "https://registry.yarnpkg.com/@nrwl/tao/-/tao-12.5.6.tgz#ff0942ad5d93ff36b80f0c0b6bccd4ae802ab8b3"
+  integrity sha512-wESt0sfmSwFluL+zHz0cGMvu7a/ruIf4TBNWGe/BdP5QDB29xygCy1drtl/sofNOcCprI9lC3p7INzzrLkKXqA==
   dependencies:
     chalk "4.1.0"
     enquirer "~2.3.6"
