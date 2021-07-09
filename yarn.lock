@@ -1705,13 +1705,13 @@
     semver "7.3.4"
     tslib "^2.0.0"
 
-"@nrwl/eslint-plugin-nx@12.5.0":
-  version "12.5.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-12.5.0.tgz#dd6bedd6f3bbd4ccd730bbacdc5d2b29024ff211"
-  integrity sha512-EQF8NhMkbVXEx5noTeVnSI5+s15mYD9jWSiHxgoovsBaawJEogQb3hxKEF+U3FybwNypvqZDeDf8KSSUoxp5sw==
+"@nrwl/eslint-plugin-nx@12.5.7":
+  version "12.5.7"
+  resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-12.5.7.tgz#0f2406e050f7582ae249fa06d5c3accabdff3b31"
+  integrity sha512-KAOciVRH9P3Hw0Dq4bftFp8ofIx3id5T9p2OAmyUXkrUudTM8dbV8vFSul8+gltAV6jWFkVPDNhEsEJs7JmIRA==
   dependencies:
-    "@nrwl/devkit" "12.5.0"
-    "@nrwl/workspace" "12.5.0"
+    "@nrwl/devkit" "12.5.7"
+    "@nrwl/workspace" "12.5.7"
     "@typescript-eslint/experimental-utils" "^4.3.0"
     confusing-browser-globals "^1.0.9"
 
