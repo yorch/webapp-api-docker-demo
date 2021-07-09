@@ -2400,10 +2400,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@17.0.11":
-  version "17.0.11"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.11.tgz#67fcd0ddbf5a0b083a0f94e926c7d63f3b836451"
-  integrity sha512-yFRQbD+whVonItSk7ZzP/L+gPTJVBkL/7shLEF+i9GC/1cV3JmUxEQz6+9ylhUpWSDuqo1N9qEvqS6vTj4USUA==
+"@types/react@*", "@types/react@17.0.14":
+  version "17.0.14"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.14.tgz#f0629761ca02945c4e8fea99b8177f4c5c61fb0f"
+  integrity sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -10426,10 +10426,10 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-ra-core@^3.16.3:
-  version "3.16.3"
-  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.16.3.tgz#c9543599e4eb157cbac5ea87b716d523debef2dc"
-  integrity sha512-+8zkdQ+DGEk8an4+zeMW8iZUd95GfHaCH6Gqw6hNpAeMvSrocPBoO2SpcQtMLvK3FAahUisiOLLoE5FoUZqkfQ==
+ra-core@^3.16.3, ra-core@^3.16.5:
+  version "3.16.5"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.16.5.tgz#42593e6a2c3f1d02bca35ec26199daec09bc0e8d"
+  integrity sha512-MwlCZoKdEb992rHsgmIP7fSlGhUg0IYr670D1yue/gxcM/EkAnush1nR1w9aKSIDye6c7NCQakc5ITpnRy8JEQ==
   dependencies:
     classnames "~2.2.5"
     date-fns "^1.29.0"
@@ -10440,13 +10440,13 @@ ra-core@^3.16.3:
     query-string "^5.1.1"
     reselect "~3.0.0"
 
-ra-data-json-server@3.16.3:
-  version "3.16.3"
-  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.16.3.tgz#887dcb29faa55b41fcf51de7d0d63af6a90176b5"
-  integrity sha512-nMI+tOpMViNu/hj3hVAUdvlaGBO4d6uGKZsf++UWLaUpcXb83gl4bZOBuEJztpHpzNcaw4Tn33c65kUqAaQx7Q==
+ra-data-json-server@3.16.5:
+  version "3.16.5"
+  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.16.5.tgz#91869500d818d89b04b897c5195b945e5125898f"
+  integrity sha512-shsx+PFV0dJNxlpmd5PN7YKH9hTtcC2vEI+ZrNQXODzBlQv8iVH/OgghHSfDgfQrgXPbO/zOm9cdRquttSHnyQ==
   dependencies:
     query-string "^5.1.1"
-    ra-core "^3.16.3"
+    ra-core "^3.16.5"
 
 ra-data-simple-rest@3.16.0:
   version "3.16.0"
@@ -12581,10 +12581,10 @@ typescript-tuple@^2.2.1:
   dependencies:
     typescript-compare "^0.0.2"
 
-typescript@~4.3.4:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.4.tgz#3f85b986945bcf31071decdd96cf8bfa65f9dcbc"
-  integrity sha512-uauPG7XZn9F/mo+7MrsRjyvbxFpzemRjKEZXS4AK83oP2KKOJPvb+9cO/gmnv8arWZvhnjVOXz7B49m1l0e9Ew==
+typescript@~4.3.5:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
+  integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
 
 unbox-primitive@^1.0.1:
   version "1.0.1"
