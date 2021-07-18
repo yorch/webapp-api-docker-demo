@@ -6,7 +6,9 @@
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
+    "start-api": "nx serve api",
     "build": "nx build",
+    "build-all": "nx run-many --target=build --all --prod --parallel",
     "test": "nx test",
     "lint": "nx workspace-lint && nx lint",
     "lint-all": "nx workspace-lint && nx lint && nx lint api",

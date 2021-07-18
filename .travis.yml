@@ -1,0 +1,60 @@
+services:
+  - docker
+
+env:
+  global:
+    - IMAGE_BASE_NAME=webapp-api-docker-demo
+
+before_script:
+  - echo ${IMAGE_VERSION}
+  - echo ${TRAVIS_BRANCH}
+  - echo ${TRAVIS_TAG}
+  - echo ${TRAVIS_PULL_REQUEST_BRANCH}
+  - echo ${TRAVIS_PULL_REQUEST_SHA}
+  - echo ${TRAVIS_PULL_REQUEST_SLUG}
+  - echo ${TRAVIS_JOB_ID}
+  - echo ${TRAVIS_JOB_WEB_URL}
+  - echo ${IMAGE_BASE_NAME}
+script:
+  - docker build -t ${IMAGE_BASE_NAME}-builder  -f Dockerfile.builder  .
+  - docker build -t ${IMAGE_BASE_NAME}-api      -f apps/api/Dockerfile .
+  - docker build -t ${IMAGE_BASE_NAME}-app      -f apps/app/Dockerfile .
+after_build:
+  - docker images
+
+before_deploy:
+  - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+  - export IMAGE_VERSION_TAG=${TRAVIS_TAG:-$TRAVIS_BRANCH}
+  - export IMAGE_VERSION=${TRAVIS_PULL_REQUEST_BRANCH:-$IMAGE_VERSION_TAG}
+  - export IS_LATEST=$([ "$IMAGE_VERSION" == "master" ] && echo 1 || echo 0)
+  - export IS_MASTER_OR_PR=$(([ ! -z "${TRAVIS_PULL_REQUEST_SHA}" ] || [ "${TRAVIS_BRANCH}" == "master" ]) && echo 1 || echo 0)
+  - docker tag ${IMAGE_BASE_NAME}-app ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:${IMAGE_VERSION}
+  - docker tag ${IMAGE_BASE_NAME}-api ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-api:${IMAGE_VERSION}
+deploy:
+  provider: script
+  script:
+    - docker push ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-api:${IMAGE_VERSION}
+    - docker push ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:${IMAGE_VERSION}
+    - echo ${IMAGE_VERSION_TAG} ${IMAGE_VERSION} ${IS_LATEST} ${IS_MASTER_OR_PR}
+    - >
+      $IS_LATEST
+      && docker tag ${IMAGE_BASE_NAME}-app ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:latest
+      && docker tag ${IMAGE_BASE_NAME}-api ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-api:latest
+      && docker push ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-api:latest
+      && docker push ${DOCKER_USERNAME}/${IMAGE_BASE_NAME}-app:latest
+  skip-cleanup: true
+  on:
+    all_branches: true
+    # condition: ${TRAVIS_BRANCH} =~ ^(staging|production)$
+    condition: ${IS_MASTER_OR_PR} == 1
+  # on:
+  #   tags: true
+  #   branches:
+  #     only:
+  #       - master
+
+notifications:
+  email:
+    # on_success: never
+    on_success: always
+    on_failure: always
