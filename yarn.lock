@@ -2590,15 +2590,15 @@
     "@typescript-eslint/experimental-utils" "^4.3.0"
     confusing-browser-globals "^1.0.9"
 
-"@nrwl/express@12.5.7":
-  version "12.5.7"
-  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-12.5.7.tgz#9946c20ffa2baa3999042b1dd239fb6182bfa59e"
-  integrity sha512-/KQpwlQ6gp7cyjsowu9VS2bFijMwCP/gf9EAIcWjoMt0DTgjZB2Oi2RmMIONddgAA6UEcHJbAWiMMUkLvZr8eQ==
+"@nrwl/express@12.8.0":
+  version "12.8.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-12.8.0.tgz#31f20467a4f188de7f3f45ee81188349e4cf1251"
+  integrity sha512-Ziw1HTdJGovVjsXgAARId/7Yj/dWiZw1aGh7YXWanzXymLGMGalGNBtcgDZn6y/RRnQMI/af2kuG5HomU9S4TQ==
   dependencies:
-    "@nrwl/devkit" "12.5.7"
-    "@nrwl/jest" "12.5.7"
-    "@nrwl/node" "12.5.7"
-    "@nrwl/workspace" "12.5.7"
+    "@nrwl/devkit" "12.8.0"
+    "@nrwl/jest" "12.8.0"
+    "@nrwl/node" "12.8.0"
+    "@nrwl/workspace" "12.8.0"
 
 "@nrwl/jest@12.5.7":
   version "12.5.7"
@@ -2647,32 +2647,6 @@
     minimatch "3.0.4"
     tmp "~0.2.1"
     tslib "^2.0.0"
-
-"@nrwl/node@12.5.7":
-  version "12.5.7"
-  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-12.5.7.tgz#d56b87875b6520f39782bce9921399b019e4894b"
-  integrity sha512-DYqiIJ08nx91ptaUALTjzo7xCoTHG3Tr1YWr2Zg7FaPeMJFuKIjUsrNCWzsWL8AOiCZbyx7b4te2Svnjl/okVQ==
-  dependencies:
-    "@nrwl/devkit" "12.5.7"
-    "@nrwl/jest" "12.5.7"
-    "@nrwl/linter" "12.5.7"
-    "@nrwl/workspace" "12.5.7"
-    circular-dependency-plugin "5.2.0"
-    copy-webpack-plugin "6.0.3"
-    fork-ts-checker-webpack-plugin "^3.1.1"
-    fs-extra "^9.1.0"
-    glob "7.1.4"
-    license-webpack-plugin "2.1.2"
-    rxjs "^6.5.4"
-    rxjs-for-await "0.0.2"
-    source-map-support "0.5.16"
-    tree-kill "1.2.2"
-    ts-loader "5.4.5"
-    tsconfig-paths-webpack-plugin "3.2.0"
-    tslib "^2.0.0"
-    webpack "4.42.0"
-    webpack-merge "4.2.1"
-    webpack-node-externals "1.7.2"
 
 "@nrwl/node@12.8.0":
   version "12.8.0"
@@ -13736,14 +13710,6 @@ source-map-resolve@^0.5.0:
     resolve-url "^0.2.1"
     source-map-url "^0.4.0"
     urix "^0.1.0"
-
-source-map-support@0.5.16:
-  version "0.5.16"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.16.tgz#0ae069e7fe3ba7538c64c98515e35339eac5a042"
-  integrity sha512-efyLRJDr68D9hBBNIPWFjhpFzURh+KJykQwvMyW5UiZzYwoF6l4YMMDIJJEyFWxWCqfyxLzz6tSfUFR+kXXsVQ==
-  dependencies:
-    buffer-from "^1.0.0"
-    source-map "^0.6.0"
 
 source-map-support@0.5.19, source-map-support@^0.5.6, source-map-support@~0.5.12, source-map-support@~0.5.19:
   version "0.5.19"
