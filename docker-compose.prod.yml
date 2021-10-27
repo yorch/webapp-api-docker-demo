@@ -129,7 +129,7 @@ services:
       - 'traefik.http.routers.adminer-secured.tls.certResolver=webcert'
 
   postgres:
-    image: postgres
+    image: postgres:14-alpine
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
       - ./docker/_db_init:/docker-entrypoint-initdb.d
