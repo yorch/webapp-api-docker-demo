@@ -1973,6 +1973,34 @@
     webpack-merge "4.2.1"
     webpack-node-externals "1.7.2"
 
+"@nrwl/node@13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-13.1.1.tgz#b2f7ddb779e5865a8ebdea7dc162b130267ff9c2"
+  integrity sha512-MWpcvvJYTRl4Uh1CD5JqtRrQGSIXN2/hqpnF3dOajW6odC2haAuYO7SEYCRCTdMidyCgQSJNiHrZYNZoDKSXdw==
+  dependencies:
+    "@nrwl/devkit" "13.1.1"
+    "@nrwl/jest" "13.1.1"
+    "@nrwl/linter" "13.1.1"
+    "@nrwl/workspace" "13.1.1"
+    chalk "4.1.0"
+    copy-webpack-plugin "^9.0.1"
+    enhanced-resolve "^5.8.3"
+    fork-ts-checker-webpack-plugin "6.2.10"
+    fs-extra "^9.1.0"
+    glob "7.1.4"
+    license-webpack-plugin "2.3.15"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    source-map-support "0.5.19"
+    tree-kill "1.2.2"
+    ts-loader "^9.2.6"
+    tsconfig-paths "^3.9.0"
+    tsconfig-paths-webpack-plugin "3.4.1"
+    tslib "^2.0.0"
+    webpack "^5.58.1"
+    webpack-merge "^5.8.0"
+    webpack-node-externals "^3.0.0"
+
 "@nrwl/react@13.1.1":
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/@nrwl/react/-/react-13.1.1.tgz#77b455cff2e58437537fe171f04646e37ae2dad0"
@@ -12014,7 +12042,7 @@ source-map-resolve@^0.6.0:
     atob "^2.1.2"
     decode-uri-component "^0.2.0"
 
-source-map-support@0.5.19, source-map-support@^0.5.6, source-map-support@~0.5.12:
+source-map-support@0.5.19:
   version "0.5.19"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.19.tgz#a98b62f86dcaf4f67399648c085291ab9e8fed61"
   integrity sha512-Wonm7zOCIJzBGQdB+thsPar0kYuCIzYvxZwlBa87yi/Mdjv7Tip2cyVbLj5o0cFPN4EVkuTwb3GDDyUx2DGnGw==
@@ -12022,7 +12050,7 @@ source-map-support@0.5.19, source-map-support@^0.5.6, source-map-support@~0.5.12
     buffer-from "^1.0.0"
     source-map "^0.6.0"
 
-source-map-support@~0.5.20:
+source-map-support@^0.5.6, source-map-support@~0.5.12, source-map-support@~0.5.20:
   version "0.5.20"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.20.tgz#12166089f8f5e5e8c56926b377633392dd2cb6c9"
   integrity sha512-n1lZZ8Ve4ksRqizaBQgxXDgKwttHDhyfQjA6YZZn8+AroHbsIz+JjwxQDxbp+7y5OYCI8t1Yk7etjD9CRd2hIw==
