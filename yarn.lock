@@ -26,7 +26,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.15.0.tgz#2dbaf8b85334796cafbb0f5793a90a2fc010b176"
   integrity sha512-0NqAC1IJE0S0+lL1SWFMxMkz1pKCNCjI4tr2Zx4LJSXxCLAdr6KyArnY+sno5m3yH9g737ygOyPABDsnXkpxiA==
 
-"@babel/core@^7.0.1", "@babel/core@^7.1.0", "@babel/core@^7.12.3", "@babel/core@^7.15.0", "@babel/core@^7.7.2", "@babel/core@^7.7.5":
+"@babel/core@^7.1.0", "@babel/core@^7.12.3", "@babel/core@^7.15.0", "@babel/core@^7.7.2", "@babel/core@^7.7.5":
   version "7.15.0"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.15.0.tgz#749e57c68778b73ad8082775561f67f5196aafa8"
   integrity sha512-tXtmTminrze5HEUPn/a0JtOzzfp0nk+UEXQ/tqIJo3WDGypl/2OFQEMll/zSFU8f/lfmfLXvTaORHF3cfXIQMw==
@@ -967,7 +967,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.14.5"
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/preset-env@^7.0.0", "@babel/preset-env@^7.12.1", "@babel/preset-env@^7.15.0":
+"@babel/preset-env@^7.12.1", "@babel/preset-env@^7.15.0":
   version "7.15.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.15.0.tgz#e2165bf16594c9c05e52517a194bf6187d6fe464"
   integrity sha512-FhEpCNFCcWW3iZLg0L2NPE9UerdtsCR6ZcsGHUX6Om6kbCQeL5QZDqFDmeNHC6/fy6UH3jEge7K4qG5uC9In0Q==
@@ -1205,18 +1205,6 @@
     tough-cookie "~2.5.0"
     tunnel-agent "^0.6.0"
     uuid "^8.3.2"
-
-"@cypress/webpack-preprocessor@4.1.5":
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/@cypress/webpack-preprocessor/-/webpack-preprocessor-4.1.5.tgz#b47d515d2540af977ee8b69d7c4eed64e3027668"
-  integrity sha512-B4miSaS3VCMVSlfuvbWCjytTywdnquRsF1tQ3quC7TGUzEXnQZ4+o8WUKibjMozrOomALkUdMxqOJ1ib5oFkKw==
-  dependencies:
-    bluebird "3.7.1"
-    debug "4.1.1"
-  optionalDependencies:
-    "@babel/core" "^7.0.1"
-    "@babel/preset-env" "^7.0.0"
-    babel-loader "^8.0.2"
 
 "@cypress/webpack-preprocessor@^5.9.1":
   version "5.9.1"
@@ -1806,24 +1794,6 @@
     yargs "15.4.1"
     yargs-parser "20.0.0"
 
-"@nrwl/cypress@12.8.0":
-  version "12.8.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-12.8.0.tgz#87ac27c9e0832512f8dfbe7409a07a5c8bb84104"
-  integrity sha512-TALGruMK+8FRQAxPxh9UG5mcgsiTGJ0oGhHjJwCaaK5Eqg+/je8f4xaRmLo8YoX2CVl8B1q3pG599/nABtALOQ==
-  dependencies:
-    "@cypress/webpack-preprocessor" "4.1.5"
-    "@nrwl/devkit" "12.8.0"
-    "@nrwl/linter" "12.8.0"
-    "@nrwl/workspace" "12.8.0"
-    chalk "4.1.0"
-    fork-ts-checker-webpack-plugin "6.2.10"
-    rxjs "^6.5.4"
-    ts-loader "5.4.5"
-    tsconfig-paths-webpack-plugin "3.4.1"
-    tslib "^2.0.0"
-    webpack-node-externals "1.7.2"
-    yargs-parser "20.0.0"
-
 "@nrwl/cypress@13.1.1":
   version "13.1.1"
   resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-13.1.1.tgz#baca73bb63103567c0b819d3a8f41b5556f713ab"
@@ -2002,6 +1972,34 @@
     webpack "4.46.0"
     webpack-merge "4.2.1"
     webpack-node-externals "1.7.2"
+
+"@nrwl/node@13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-13.1.1.tgz#b2f7ddb779e5865a8ebdea7dc162b130267ff9c2"
+  integrity sha512-MWpcvvJYTRl4Uh1CD5JqtRrQGSIXN2/hqpnF3dOajW6odC2haAuYO7SEYCRCTdMidyCgQSJNiHrZYNZoDKSXdw==
+  dependencies:
+    "@nrwl/devkit" "13.1.1"
+    "@nrwl/jest" "13.1.1"
+    "@nrwl/linter" "13.1.1"
+    "@nrwl/workspace" "13.1.1"
+    chalk "4.1.0"
+    copy-webpack-plugin "^9.0.1"
+    enhanced-resolve "^5.8.3"
+    fork-ts-checker-webpack-plugin "6.2.10"
+    fs-extra "^9.1.0"
+    glob "7.1.4"
+    license-webpack-plugin "2.3.15"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    source-map-support "0.5.19"
+    tree-kill "1.2.2"
+    ts-loader "^9.2.6"
+    tsconfig-paths "^3.9.0"
+    tsconfig-paths-webpack-plugin "3.4.1"
+    tslib "^2.0.0"
+    webpack "^5.58.1"
+    webpack-merge "^5.8.0"
+    webpack-node-externals "^3.0.0"
 
 "@nrwl/react@13.1.1":
   version "13.1.1"
@@ -3768,7 +3766,7 @@ babel-jest@^27.2.2, babel-jest@^27.3.1:
     graceful-fs "^4.2.4"
     slash "^3.0.0"
 
-babel-loader@^8.0.2, babel-loader@^8.2.2:
+babel-loader@^8.2.2:
   version "8.2.3"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.2.3.tgz#8986b40f1a64cacfcb4b8429320085ef68b1342d"
   integrity sha512-n4Zeta8NC3QAsuyiizu0GkmRcQ6clkV9WFUnUf1iXP//IeSKbWjofW3UHyZVwlOB4y039YQKefawyTn64Zwbuw==
@@ -3984,11 +3982,6 @@ blob-util@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/blob-util/-/blob-util-2.0.2.tgz#3b4e3c281111bb7f11128518006cdc60b403a1eb"
   integrity sha512-T7JQa+zsXXEa6/8ZhHcQEW1UFfVM49Ts65uBkFL6fz2QmrElqmbajIDJvuA0tEhRe5eIjpV9ZF+0RfZR9voJFQ==
-
-bluebird@3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.1.tgz#df70e302b471d7473489acf26a93d63b53f874de"
-  integrity sha512-DdmyoGCleJnkbp3nkbxTLJ18rjDsE4yCggEwKNXkeV123sPNfOCYeDoeuOY+F2FrSjO1YXcTU+dsy96KMy+gcg==
 
 bluebird@^3.5.5, bluebird@^3.7.1, bluebird@^3.7.2:
   version "3.7.2"
@@ -5316,13 +5309,6 @@ debug@4, debug@4.3.2, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, de
   integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
   dependencies:
     ms "2.1.2"
-
-debug@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
-  integrity sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
-  dependencies:
-    ms "^2.1.1"
 
 debug@^3.1.0, debug@^3.1.1, debug@^3.2.7:
   version "3.2.7"
@@ -12056,7 +12042,7 @@ source-map-resolve@^0.6.0:
     atob "^2.1.2"
     decode-uri-component "^0.2.0"
 
-source-map-support@0.5.19, source-map-support@^0.5.6, source-map-support@~0.5.12:
+source-map-support@0.5.19:
   version "0.5.19"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.19.tgz#a98b62f86dcaf4f67399648c085291ab9e8fed61"
   integrity sha512-Wonm7zOCIJzBGQdB+thsPar0kYuCIzYvxZwlBa87yi/Mdjv7Tip2cyVbLj5o0cFPN4EVkuTwb3GDDyUx2DGnGw==
@@ -12064,7 +12050,7 @@ source-map-support@0.5.19, source-map-support@^0.5.6, source-map-support@~0.5.12
     buffer-from "^1.0.0"
     source-map "^0.6.0"
 
-source-map-support@~0.5.20:
+source-map-support@^0.5.6, source-map-support@~0.5.12, source-map-support@~0.5.20:
   version "0.5.20"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.20.tgz#12166089f8f5e5e8c56926b377633392dd2cb6c9"
   integrity sha512-n1lZZ8Ve4ksRqizaBQgxXDgKwttHDhyfQjA6YZZn8+AroHbsIz+JjwxQDxbp+7y5OYCI8t1Yk7etjD9CRd2hIw==
