@@ -31,17 +31,11 @@ The architecture and tech stack of the deployed application consist of:
 - Once you have your server setup and you are SSH into it, clone this repo (or a fork of this if you created one).
 - Create an `.env` file based on `.env.sample` (ie: `cp .env.sample .env`).
 - Update the env variables in your new `.env` file, mainly `DOMAIN`.
-- Run the build:
-  ```sh
-  ./build-with-docker.sh
-  ```
-  This command will install all NodeJS dependencies and run the build using `yarn` inside a Docker container and saving the results in your server, so you don't have to install NodeJS / Yarn on the server, which makes this very portable.
-- Once the build is complete, the compiled bundles for the web app and server will live in `dist` directory.
 - Next, we need to run Docker Compose to prepare and start all the require containers for the whole stack. We can use:
   ```sh
   ./run-prod.sh
   ```
-  This will run all the containers configured in `docker-compose.prod.yml`.
+  This will run all the containers configured in `docker-compose.prod.yml`. Refer to comments on that file and in the relavant `Dockerfile` files for more info.
 
 ## Endpoints
 

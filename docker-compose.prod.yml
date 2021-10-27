@@ -52,14 +52,20 @@ services:
       # Auth
       # - "traefik.http.routers.traefik-api-secured.middlewares=global-auth"
 
+  # This service is only a helper for building the images for App and API services, it wont actually run
+  builder:
+    build:
+      context: .
+      dockerfile: Dockerfile.builder
+    image: webapp-api-docker-demo-builder
+
   api:
-    image: node:16-alpine
+    # image: node:16-alpine
+    build:
+      context: ./apps/api
     restart: unless-stopped
     depends_on:
       - postgres
-    volumes:
-      - ./dist/apps/api:/app
-      - ./node_modules:/app/node_modules
     env_file: .env
     command: node /app/main.js
     labels:
@@ -78,10 +84,10 @@ services:
       - 'traefik.http.services.api-secured.loadbalancer.server.port=${SERVER_PORT?Variable SERVER_PORT not set}'
 
   app:
-    image: nginx:1.17-alpine
+    build:
+      context: ./apps/app
     restart: unless-stopped
     volumes:
-      - ./dist/apps/app:/usr/share/nginx/html
       - ./logs/app:/var/log/nginx
     labels:
       - 'traefik.enable=true'
@@ -129,7 +135,7 @@ services:
       - 'traefik.http.routers.adminer-secured.tls.certResolver=webcert'
 
   postgres:
-    image: postgres
+    image: postgres:12-alpine
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
       - ./docker/_db_init:/docker-entrypoint-initdb.d
