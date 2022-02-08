@@ -1586,15 +1586,14 @@
     "@swc/core-linux-x64-gnu" "^1.2.136"
     "@swc/core-linux-x64-musl" "^1.2.136"
 
-"@nrwl/express@13.1.2":
-  version "13.1.2"
-  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-13.1.2.tgz#5d3ff1eda4723e9ac71fa3424adad2336ccee50e"
-  integrity sha512-NhMFojj75Daz+oPHUCVNYhyyu1Y5L0UtZV23PCYSHp+QboA2zoG3mhEgIMMPrNvIw1xJjuQe6vU4KLamxXl0rg==
+"@nrwl/express@13.7.3":
+  version "13.7.3"
+  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-13.7.3.tgz#59ddddb090c5b9b7de60b62044b3a5c580d5c927"
+  integrity sha512-Gi1e28+UeQv9gI1zAyeUIzGazUbM8bYcNuV+VF7v1lAp7urEd5tbKP9mvDjEpk+k21dcNJttrXMw3q6lN6/DuQ==
   dependencies:
-    "@nrwl/devkit" "13.1.2"
-    "@nrwl/jest" "13.1.2"
-    "@nrwl/node" "13.1.2"
-    "@nrwl/workspace" "13.1.2"
+    "@nrwl/devkit" "13.7.3"
+    "@nrwl/node" "13.7.3"
+    "@nrwl/workspace" "13.7.3"
 
 "@nrwl/jest@13.1.2":
   version "13.1.2"
@@ -1652,34 +1651,6 @@
     "@phenomnomnominal/tsquery" "4.1.1"
     tmp "~0.2.1"
     tslib "^2.3.0"
-
-"@nrwl/node@13.1.2":
-  version "13.1.2"
-  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-13.1.2.tgz#c6edf7adbd8dc8fd63e8df20891cb222071dfc72"
-  integrity sha512-KBIL+Zuz+JXWPcaLH9yZW/ppaJkyIGChtbjKmcbYsF+Gj2bPzyV2F1J6ZKDoR4Np3HWN2a/XLyIildUMl14p4w==
-  dependencies:
-    "@nrwl/devkit" "13.1.2"
-    "@nrwl/jest" "13.1.2"
-    "@nrwl/linter" "13.1.2"
-    "@nrwl/workspace" "13.1.2"
-    chalk "4.1.0"
-    copy-webpack-plugin "^9.0.1"
-    enhanced-resolve "^5.8.3"
-    fork-ts-checker-webpack-plugin "6.2.10"
-    fs-extra "^9.1.0"
-    glob "7.1.4"
-    license-webpack-plugin "2.3.15"
-    rxjs "^6.5.4"
-    rxjs-for-await "0.0.2"
-    source-map-support "0.5.19"
-    tree-kill "1.2.2"
-    ts-loader "^9.2.6"
-    tsconfig-paths "^3.9.0"
-    tsconfig-paths-webpack-plugin "3.4.1"
-    tslib "^2.0.0"
-    webpack "^5.58.1"
-    webpack-merge "^5.8.0"
-    webpack-node-externals "^3.0.0"
 
 "@nrwl/node@13.7.3":
   version "13.7.3"
