@@ -44,7 +44,7 @@
     "reflect-metadata": "0.1.13",
     "styled-components": "5.3.3",
     "typeorm": "0.2.38",
-    "winston": "3.3.3"
+    "winston": "3.5.1"
   },
   "devDependencies": {
     "@babel/preset-react": "7.16.7",
