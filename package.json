@@ -35,7 +35,7 @@
     "cors": "2.8.5",
     "document-register-element": "1.14.10",
     "express": "4.17.2",
-    "pg": "8.7.1",
+    "pg": "8.7.3",
     "ra-data-json-server": "3.19.0",
     "ra-data-simple-rest": "3.19.0",
     "react": "17.0.2",
