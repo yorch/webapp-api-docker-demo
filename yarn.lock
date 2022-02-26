@@ -2389,25 +2389,6 @@
     webpack-node-externals "^3.0.0"
     yargs-parser "20.0.0"
 
-"@nrwl/cypress@13.7.3":
-  version "13.7.3"
-  resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-13.7.3.tgz#dacec1e8643529329a2c5f5a43682d56583ec4b9"
-  integrity sha512-DoWxp78/274tQLGGIhlSu68F4/r1VbsfVglBJmWqwZxhCwzVyrkwzzW0/+urUCwMDu0TDrPrTB90KSah7lNmiQ==
-  dependencies:
-    "@cypress/webpack-preprocessor" "^5.9.1"
-    "@nrwl/devkit" "13.7.3"
-    "@nrwl/linter" "13.7.3"
-    "@nrwl/workspace" "13.7.3"
-    chalk "4.1.0"
-    enhanced-resolve "^5.8.3"
-    fork-ts-checker-webpack-plugin "6.2.10"
-    rxjs "^6.5.4"
-    ts-loader "^9.2.6"
-    tsconfig-paths "^3.9.0"
-    tsconfig-paths-webpack-plugin "3.5.2"
-    tslib "^2.3.0"
-    webpack-node-externals "^3.0.0"
-
 "@nrwl/cypress@13.8.3":
   version "13.8.3"
   resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-13.8.3.tgz#ed1dbcc434af5be037920c1cd370ab16251f3d8f"
@@ -12140,17 +12121,7 @@ tsconfig-paths-webpack-plugin@3.5.2:
     enhanced-resolve "^5.7.0"
     tsconfig-paths "^3.9.0"
 
-tsconfig-paths@^3.11.0, tsconfig-paths@^3.9.0:
-  version "3.11.0"
-  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.11.0.tgz#954c1fe973da6339c78e06b03ce2e48810b65f36"
-  integrity sha512-7ecdYDnIdmv639mmDwslG6KQg1Z9STTz1j7Gcz0xa+nshh/gKDAHcPxRbWOsA3SPp0tXP2leTcY9Kw+NAkfZzA==
-  dependencies:
-    "@types/json5" "^0.0.29"
-    json5 "^1.0.1"
-    minimist "^1.2.0"
-    strip-bom "^3.0.0"
-
-tsconfig-paths@^3.12.0:
+tsconfig-paths@^3.11.0, tsconfig-paths@^3.12.0, tsconfig-paths@^3.9.0:
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.12.0.tgz#19769aca6ee8f6a1a341e38c8fa45dd9fb18899b"
   integrity sha512-e5adrnOYT6zqVnWqZu7i/BQ3BnhzvGbjEjejFXO20lKIKpwTaupkCPgEfv4GZK1IBciJUEhYs3J3p75FdaTFVg==
