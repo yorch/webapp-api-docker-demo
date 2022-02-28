@@ -2389,25 +2389,6 @@
     webpack-node-externals "^3.0.0"
     yargs-parser "20.0.0"
 
-"@nrwl/cypress@13.7.3":
-  version "13.7.3"
-  resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-13.7.3.tgz#dacec1e8643529329a2c5f5a43682d56583ec4b9"
-  integrity sha512-DoWxp78/274tQLGGIhlSu68F4/r1VbsfVglBJmWqwZxhCwzVyrkwzzW0/+urUCwMDu0TDrPrTB90KSah7lNmiQ==
-  dependencies:
-    "@cypress/webpack-preprocessor" "^5.9.1"
-    "@nrwl/devkit" "13.7.3"
-    "@nrwl/linter" "13.7.3"
-    "@nrwl/workspace" "13.7.3"
-    chalk "4.1.0"
-    enhanced-resolve "^5.8.3"
-    fork-ts-checker-webpack-plugin "6.2.10"
-    rxjs "^6.5.4"
-    ts-loader "^9.2.6"
-    tsconfig-paths "^3.9.0"
-    tsconfig-paths-webpack-plugin "3.5.2"
-    tslib "^2.3.0"
-    webpack-node-externals "^3.0.0"
-
 "@nrwl/cypress@13.8.3":
   version "13.8.3"
   resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-13.8.3.tgz#ed1dbcc434af5be037920c1cd370ab16251f3d8f"
@@ -2481,14 +2462,14 @@
     "@swc/core-linux-x64-gnu" "^1.2.136"
     "@swc/core-linux-x64-musl" "^1.2.136"
 
-"@nrwl/express@13.7.3":
-  version "13.7.3"
-  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-13.7.3.tgz#59ddddb090c5b9b7de60b62044b3a5c580d5c927"
-  integrity sha512-Gi1e28+UeQv9gI1zAyeUIzGazUbM8bYcNuV+VF7v1lAp7urEd5tbKP9mvDjEpk+k21dcNJttrXMw3q6lN6/DuQ==
+"@nrwl/express@13.8.3":
+  version "13.8.3"
+  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-13.8.3.tgz#b50d75ac6c062c33f79d4a59935a0b067c4e44fa"
+  integrity sha512-6tY6lpNKAQyJOeiuX3wTWOg8Ij48K6nil7Quf5oW8oxoFIaTIw3OlBRQDFUwlFbSGIq4t5rJSdiUliLgX3iU1w==
   dependencies:
-    "@nrwl/devkit" "13.7.3"
-    "@nrwl/node" "13.7.3"
-    "@nrwl/workspace" "13.7.3"
+    "@nrwl/devkit" "13.8.3"
+    "@nrwl/node" "13.8.3"
+    "@nrwl/workspace" "13.8.3"
 
 "@nrwl/jest@13.1.2":
   version "13.1.2"
@@ -2603,6 +2584,36 @@
     "@nrwl/jest" "13.7.3"
     "@nrwl/linter" "13.7.3"
     "@nrwl/workspace" "13.7.3"
+    chalk "4.1.0"
+    copy-webpack-plugin "^9.0.1"
+    enhanced-resolve "^5.8.3"
+    fork-ts-checker-webpack-plugin "6.2.10"
+    fs-extra "^9.1.0"
+    glob "7.1.4"
+    license-webpack-plugin "4.0.0"
+    rxjs "^6.5.4"
+    rxjs-for-await "0.0.2"
+    source-map-support "0.5.19"
+    terser-webpack-plugin "^5.3.0"
+    tree-kill "1.2.2"
+    ts-loader "^9.2.6"
+    ts-node "~9.1.1"
+    tsconfig-paths "^3.9.0"
+    tsconfig-paths-webpack-plugin "3.5.2"
+    tslib "^2.3.0"
+    webpack "^5.58.1"
+    webpack-merge "^5.8.0"
+    webpack-node-externals "^3.0.0"
+
+"@nrwl/node@13.8.3":
+  version "13.8.3"
+  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-13.8.3.tgz#db09ce1dedc60569c8b260fa42c05152548b4273"
+  integrity sha512-tNf0+FcuXyttBwK47VDAn4NQCrLFAtL+f2jq0k6let1ve+Jq7VgWRGIZMpupMIaeJ/0HqWKuytGyFPzOIaCC6w==
+  dependencies:
+    "@nrwl/devkit" "13.8.3"
+    "@nrwl/jest" "13.8.3"
+    "@nrwl/linter" "13.8.3"
+    "@nrwl/workspace" "13.8.3"
     chalk "4.1.0"
     copy-webpack-plugin "^9.0.1"
     enhanced-resolve "^5.8.3"
@@ -12140,17 +12151,7 @@ tsconfig-paths-webpack-plugin@3.5.2:
     enhanced-resolve "^5.7.0"
     tsconfig-paths "^3.9.0"
 
-tsconfig-paths@^3.11.0, tsconfig-paths@^3.9.0:
-  version "3.11.0"
-  resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.11.0.tgz#954c1fe973da6339c78e06b03ce2e48810b65f36"
-  integrity sha512-7ecdYDnIdmv639mmDwslG6KQg1Z9STTz1j7Gcz0xa+nshh/gKDAHcPxRbWOsA3SPp0tXP2leTcY9Kw+NAkfZzA==
-  dependencies:
-    "@types/json5" "^0.0.29"
-    json5 "^1.0.1"
-    minimist "^1.2.0"
-    strip-bom "^3.0.0"
-
-tsconfig-paths@^3.12.0:
+tsconfig-paths@^3.11.0, tsconfig-paths@^3.12.0, tsconfig-paths@^3.9.0:
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.12.0.tgz#19769aca6ee8f6a1a341e38c8fa45dd9fb18899b"
   integrity sha512-e5adrnOYT6zqVnWqZu7i/BQ3BnhzvGbjEjejFXO20lKIKpwTaupkCPgEfv4GZK1IBciJUEhYs3J3p75FdaTFVg==
