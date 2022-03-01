@@ -2575,36 +2575,6 @@
     tmp "~0.2.1"
     tslib "^2.3.0"
 
-"@nrwl/node@13.7.3":
-  version "13.7.3"
-  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-13.7.3.tgz#06a8c535190663cf48f1dd35bd86a015e485de23"
-  integrity sha512-NcLYqG0JcXMsCs8UVXvu2r2lkFonywfqBAWZsIeQWn9xoH1WSqzvHMiuWySFg4ltN/MpQ8hTGvrQlt83fwRJ/Q==
-  dependencies:
-    "@nrwl/devkit" "13.7.3"
-    "@nrwl/jest" "13.7.3"
-    "@nrwl/linter" "13.7.3"
-    "@nrwl/workspace" "13.7.3"
-    chalk "4.1.0"
-    copy-webpack-plugin "^9.0.1"
-    enhanced-resolve "^5.8.3"
-    fork-ts-checker-webpack-plugin "6.2.10"
-    fs-extra "^9.1.0"
-    glob "7.1.4"
-    license-webpack-plugin "4.0.0"
-    rxjs "^6.5.4"
-    rxjs-for-await "0.0.2"
-    source-map-support "0.5.19"
-    terser-webpack-plugin "^5.3.0"
-    tree-kill "1.2.2"
-    ts-loader "^9.2.6"
-    ts-node "~9.1.1"
-    tsconfig-paths "^3.9.0"
-    tsconfig-paths-webpack-plugin "3.5.2"
-    tslib "^2.3.0"
-    webpack "^5.58.1"
-    webpack-merge "^5.8.0"
-    webpack-node-externals "^3.0.0"
-
 "@nrwl/node@13.8.3":
   version "13.8.3"
   resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-13.8.3.tgz#db09ce1dedc60569c8b260fa42c05152548b4273"
@@ -3643,10 +3613,10 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.5.tgz#1001cc5e6a3704b83c236027e77f2f58ea010f40"
   integrity sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==
 
-"@types/node@*", "@types/node@17.0.16":
-  version "17.0.16"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.16.tgz#e3733f46797b9df9e853ca9f719c8a6f7b84cd26"
-  integrity sha512-ydLaGVfQOQ6hI1xK2A5nVh8bl0OGoIfYMxPWHqqYe9bTkWCfqiVvZoh2I/QF2sNSkZzZyROBoTefIEI+PB6iIA==
+"@types/node@*", "@types/node@17.0.21":
+  version "17.0.21"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.21.tgz#864b987c0c68d07b4345845c3e63b75edd143644"
+  integrity sha512-DBZCJbhII3r90XbQxI8Y9IjjiiOGlZ0Hr32omXIZvwwZ7p4DMMXGrKXVyPfuoBOri9XNtL0UK69jYIBIsRX3QQ==
 
 "@types/node@^14.14.31":
   version "14.17.32"
