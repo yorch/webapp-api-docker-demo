@@ -2462,14 +2462,14 @@
     "@swc/core-linux-x64-gnu" "^1.2.136"
     "@swc/core-linux-x64-musl" "^1.2.136"
 
-"@nrwl/express@13.7.3":
-  version "13.7.3"
-  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-13.7.3.tgz#59ddddb090c5b9b7de60b62044b3a5c580d5c927"
-  integrity sha512-Gi1e28+UeQv9gI1zAyeUIzGazUbM8bYcNuV+VF7v1lAp7urEd5tbKP9mvDjEpk+k21dcNJttrXMw3q6lN6/DuQ==
+"@nrwl/express@13.8.3":
+  version "13.8.3"
+  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-13.8.3.tgz#b50d75ac6c062c33f79d4a59935a0b067c4e44fa"
+  integrity sha512-6tY6lpNKAQyJOeiuX3wTWOg8Ij48K6nil7Quf5oW8oxoFIaTIw3OlBRQDFUwlFbSGIq4t5rJSdiUliLgX3iU1w==
   dependencies:
-    "@nrwl/devkit" "13.7.3"
-    "@nrwl/node" "13.7.3"
-    "@nrwl/workspace" "13.7.3"
+    "@nrwl/devkit" "13.8.3"
+    "@nrwl/node" "13.8.3"
+    "@nrwl/workspace" "13.8.3"
 
 "@nrwl/jest@13.1.2":
   version "13.1.2"
