@@ -2390,25 +2390,6 @@
     webpack-node-externals "^3.0.0"
     yargs-parser "20.0.0"
 
-"@nrwl/cypress@13.8.4":
-  version "13.8.4"
-  resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-13.8.4.tgz#33b17041d8993f91930a02df7bf9cf37842b9417"
-  integrity sha512-PCkr70rOoVuYwLJiz3QkIG+e5xj1ePtLe7Hq1KAMD9Ge4W/A6jEGnSFgkQxiEam1JQo/OAx48/KuVEHBpHLv9A==
-  dependencies:
-    "@cypress/webpack-preprocessor" "^5.9.1"
-    "@nrwl/devkit" "13.8.4"
-    "@nrwl/linter" "13.8.4"
-    "@nrwl/workspace" "13.8.4"
-    chalk "4.1.0"
-    enhanced-resolve "^5.8.3"
-    fork-ts-checker-webpack-plugin "6.2.10"
-    rxjs "^6.5.4"
-    ts-loader "^9.2.6"
-    tsconfig-paths "^3.9.0"
-    tsconfig-paths-webpack-plugin "3.5.2"
-    tslib "^2.3.0"
-    webpack-node-externals "^3.0.0"
-
 "@nrwl/cypress@13.8.5":
   version "13.8.5"
   resolved "https://registry.yarnpkg.com/@nrwl/cypress/-/cypress-13.8.5.tgz#ced128ede06ce1496aef1b0a2fbcf795606e18fd"
