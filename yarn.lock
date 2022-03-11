@@ -2499,23 +2499,16 @@
     semver "7.3.4"
     tslib "^2.3.0"
 
-"@nrwl/eslint-plugin-nx@13.8.4":
-  version "13.8.4"
-  resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-13.8.4.tgz#d47f90f9f498883cc22c13fb776d2517bc4ef8e4"
-  integrity sha512-uQfCzH1TAsV3/v+kLwA86BBfPpRMiMUNgRzvcXoyw1tWE+3ZFsstiUQXuaz9VB1ScJ7QqkmyNrBItrIg14Cu6A==
+"@nrwl/eslint-plugin-nx@13.8.7":
+  version "13.8.7"
+  resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-13.8.7.tgz#8d19ac8799540d8140748c48f641e15b4cb74afa"
+  integrity sha512-zODV0Q6295Zl3rbSJQvjxwohS67Vu6d3JiQ01Fa3WJ4UYkORU6z+0cYF7VbFx/Z9HLSo/+c6ZvzjTfZzqjlRig==
   dependencies:
-    "@nrwl/devkit" "13.8.4"
-    "@nrwl/workspace" "13.8.4"
-    "@swc-node/register" "^1.4.2"
+    "@nrwl/devkit" "13.8.7"
+    "@nrwl/workspace" "13.8.7"
     "@typescript-eslint/experimental-utils" "~5.10.0"
     chalk "4.1.0"
     confusing-browser-globals "^1.0.9"
-    tsconfig-paths "^3.9.0"
-  optionalDependencies:
-    "@swc/core-linux-arm64-gnu" "^1.2.136"
-    "@swc/core-linux-arm64-musl" "^1.2.136"
-    "@swc/core-linux-x64-gnu" "^1.2.136"
-    "@swc/core-linux-x64-musl" "^1.2.136"
 
 "@nrwl/express@13.8.7":
   version "13.8.7"
@@ -3613,7 +3606,7 @@
   resolved "https://registry.yarnpkg.com/@swc/core-linux-arm-gnueabihf/-/core-linux-arm-gnueabihf-1.2.151.tgz#24859f442a255220ca1caa7f8f5f087f2c22fd08"
   integrity sha512-pfBrIUwu3cR/M7DzDCUJAw9jFKXvJ/Ge8auFk07lRb+JcDnPm0XxLyrLqGvNQWdcHgXeXfmnS4fMQxdb9GUN1w==
 
-"@swc/core-linux-arm64-gnu@1.2.136", "@swc/core-linux-arm64-gnu@^1.2.136":
+"@swc/core-linux-arm64-gnu@1.2.136":
   version "1.2.136"
   resolved "https://registry.yarnpkg.com/@swc/core-linux-arm64-gnu/-/core-linux-arm64-gnu-1.2.136.tgz#111a008e54d1e38b33a0d3d3134309a002f6a3b7"
   integrity sha512-B9vuahX64AYMID6MY6B2OpYiEUytcXIJCrdJwviQxF+29+xQippygrzkqq+lw2O8K0EsSXf7UvfZrz2M1DHcmA==
@@ -3623,7 +3616,7 @@
   resolved "https://registry.yarnpkg.com/@swc/core-linux-arm64-gnu/-/core-linux-arm64-gnu-1.2.151.tgz#a4ae2d8f7b0cfb0836466ca57b608be7505b13e7"
   integrity sha512-M+BTkTdPY7gteM+0dYz9wrU/j9taL4ccqPEHkDEKP21lS24y99UtuKsvdBLzDm/6ShBVLFAkgIBPu5cEb7y6ig==
 
-"@swc/core-linux-arm64-musl@1.2.136", "@swc/core-linux-arm64-musl@^1.2.136":
+"@swc/core-linux-arm64-musl@1.2.136":
   version "1.2.136"
   resolved "https://registry.yarnpkg.com/@swc/core-linux-arm64-musl/-/core-linux-arm64-musl-1.2.136.tgz#86d3a207ba519ce38410bb0f896baa6279de4051"
   integrity sha512-XxRIa3kMXlekFGQ5VDqJ4CsBmk4v61kt2rgPLjposxehuXBXXO80OiIgd/iRbEmbhwLveE8Ar+zGAMYjUp1YjQ==
@@ -3633,7 +3626,7 @@
   resolved "https://registry.yarnpkg.com/@swc/core-linux-arm64-musl/-/core-linux-arm64-musl-1.2.151.tgz#16785fa421244d9df02123ce8b4bf8964b37412a"
   integrity sha512-7A+yTtSvPJVwO8X1cxUbD/PVCx8G9MKn83G9pH/r+9sQMBXqxyw6/NR0DG6nMMiyOmJkmYWgh5mO47BN7WC4dQ==
 
-"@swc/core-linux-x64-gnu@1.2.136", "@swc/core-linux-x64-gnu@^1.2.136":
+"@swc/core-linux-x64-gnu@1.2.136":
   version "1.2.136"
   resolved "https://registry.yarnpkg.com/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.2.136.tgz#91a44b439743e59b1e1d649a87032db44d2214d3"
   integrity sha512-lTyh8d7xGcReOnA7R/hj8jtkLs67U9ut1d9sc/ogyD6FXcGuYoHcLsBn2A4cp2Q5fMtRfTZQyZznpYz9RrLoIw==
@@ -3643,7 +3636,7 @@
   resolved "https://registry.yarnpkg.com/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.2.151.tgz#b0717cb662becec95d306632fbd40f612d3db700"
   integrity sha512-ORlbN3wf1w0IQGjGToYYC/hV/Vwfcs88Ohfxc4X+IQaw/VxKG6/XT65c0btK640F2TVhvhH1MbYFJJlsycsW7g==
 
-"@swc/core-linux-x64-musl@1.2.136", "@swc/core-linux-x64-musl@^1.2.136":
+"@swc/core-linux-x64-musl@1.2.136":
   version "1.2.136"
   resolved "https://registry.yarnpkg.com/@swc/core-linux-x64-musl/-/core-linux-x64-musl-1.2.136.tgz#0bdde1359245642f6126d6f62e8abe0a1c791f0a"
   integrity sha512-mzX8eqsjEUr7rRZx2QWIqyBcd3/OEcDn/R7xO7HBM7OyzzdF+lbDYimZDiyvuw+uxTbHEUcBV975vSkcEEUNQw==
