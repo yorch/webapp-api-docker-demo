@@ -2325,12 +2325,12 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@nrwl/cli@*", "@nrwl/cli@13.8.7":
-  version "13.8.7"
-  resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-13.8.7.tgz#d2919dd85be5aa5ea24ad8510b31c3ab206e8ccb"
-  integrity sha512-/UR89Do2EUPl7EvvZR+2DxhADcp03cOCfU3OFX3IaTFSZfG+IzfnDYoIvy1JniFO8tSI9VmhoGEKS7KnJB3s2A==
+"@nrwl/cli@*", "@nrwl/cli@13.8.8":
+  version "13.8.8"
+  resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-13.8.8.tgz#0c9ac4ae16f9e1f45f59db6670e2841ad7a4920c"
+  integrity sha512-PeC9n9gDE/KLA1jqhMF8bU8Q+VyPzS1t1Yk7K6yq5NvCdyupv2JQO49JMqgUtZ/00mY6buP5/Dpy0LHoNEceuw==
   dependencies:
-    "@nrwl/tao" "13.8.7"
+    "@nrwl/tao" "13.8.8"
     chalk "4.1.0"
     enquirer "~2.3.6"
     v8-compile-cache "2.3.0"
@@ -2370,12 +2370,12 @@
     v8-compile-cache "2.3.0"
     yargs-parser "20.0.0"
 
-"@nrwl/cli@13.8.8":
-  version "13.8.8"
-  resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-13.8.8.tgz#0c9ac4ae16f9e1f45f59db6670e2841ad7a4920c"
-  integrity sha512-PeC9n9gDE/KLA1jqhMF8bU8Q+VyPzS1t1Yk7K6yq5NvCdyupv2JQO49JMqgUtZ/00mY6buP5/Dpy0LHoNEceuw==
+"@nrwl/cli@13.8.7":
+  version "13.8.7"
+  resolved "https://registry.yarnpkg.com/@nrwl/cli/-/cli-13.8.7.tgz#d2919dd85be5aa5ea24ad8510b31c3ab206e8ccb"
+  integrity sha512-/UR89Do2EUPl7EvvZR+2DxhADcp03cOCfU3OFX3IaTFSZfG+IzfnDYoIvy1JniFO8tSI9VmhoGEKS7KnJB3s2A==
   dependencies:
-    "@nrwl/tao" "13.8.8"
+    "@nrwl/tao" "13.8.7"
     chalk "4.1.0"
     enquirer "~2.3.6"
     v8-compile-cache "2.3.0"
@@ -2683,6 +2683,17 @@
   dependencies:
     "@nrwl/devkit" "13.8.7"
     "@nrwl/jest" "13.8.7"
+    "@phenomnomnominal/tsquery" "4.1.1"
+    tmp "~0.2.1"
+    tslib "^2.3.0"
+
+"@nrwl/linter@13.8.8":
+  version "13.8.8"
+  resolved "https://registry.yarnpkg.com/@nrwl/linter/-/linter-13.8.8.tgz#300ffecc6c652254256fab384d36814b7ea2f6d8"
+  integrity sha512-lYJisb2sjsA6rGc/fKydJo4uZpa1kRaQ0FbKFqs5kiJ3d3DFJGF/IlwCFB/reR6rbcM6DKbFz3hteRp+tUdqAw==
+  dependencies:
+    "@nrwl/devkit" "13.8.8"
+    "@nrwl/jest" "13.8.8"
     "@phenomnomnominal/tsquery" "4.1.1"
     tmp "~0.2.1"
     tslib "^2.3.0"
@@ -3169,6 +3180,37 @@
     "@nrwl/devkit" "13.8.7"
     "@nrwl/jest" "13.8.7"
     "@nrwl/linter" "13.8.7"
+    "@parcel/watcher" "2.0.4"
+    chalk "4.1.0"
+    chokidar "^3.5.1"
+    cli-cursor "3.1.0"
+    cli-spinners "2.6.1"
+    dotenv "~10.0.0"
+    enquirer "~2.3.6"
+    figures "3.2.0"
+    flat "^5.0.2"
+    fs-extra "^9.1.0"
+    glob "7.1.4"
+    ignore "^5.0.4"
+    minimatch "3.0.4"
+    npm-run-path "^4.0.1"
+    open "^8.4.0"
+    rxjs "^6.5.4"
+    semver "7.3.4"
+    tmp "~0.2.1"
+    tslib "^2.3.0"
+    yargs "15.4.1"
+    yargs-parser "20.0.0"
+
+"@nrwl/workspace@13.8.8":
+  version "13.8.8"
+  resolved "https://registry.yarnpkg.com/@nrwl/workspace/-/workspace-13.8.8.tgz#3aabf8bee0c519a4fed7a4f19398baf3f20c934b"
+  integrity sha512-Al9Q1EHr9ZSh3la1gojVyyw7msN+6pOjwjEOLQrFmBgVdI7THb8y6wxy3K8+oUKtqyP+MgFGRqZbY0Tj7xbRFw==
+  dependencies:
+    "@nrwl/cli" "13.8.8"
+    "@nrwl/devkit" "13.8.8"
+    "@nrwl/jest" "13.8.8"
+    "@nrwl/linter" "13.8.8"
     "@parcel/watcher" "2.0.4"
     chalk "4.1.0"
     chokidar "^3.5.1"
