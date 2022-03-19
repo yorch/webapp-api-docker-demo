@@ -53,7 +53,7 @@
     "@nrwl/express": "13.8.8",
     "@nrwl/jest": "13.8.8",
     "@nrwl/node": "13.8.8",
-    "@nrwl/react": "13.8.8",
+    "@nrwl/react": "13.9.3",
     "@nrwl/web": "13.8.8",
     "@nrwl/workspace": "13.8.8",
     "@testing-library/react": "12.1.4",
