@@ -8548,10 +8548,10 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-ra-core@^3.19.10:
-  version "3.19.10"
-  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.19.10.tgz#d356b5c61284caef7c1af528b4cd00bc7458085a"
-  integrity sha512-jOPh5PVH9WKu217tiL4ef2+V2OMkf5/wjkPw4xLemKSydKYJG5FyByzL5QE/3k7UkG6TsnJWBVaf0TOhCm5SZw==
+ra-core@^3.19.10, ra-core@^3.19.11:
+  version "3.19.11"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-3.19.11.tgz#8f33d1e9faeb483d5636e39493e99fb3af8bad59"
+  integrity sha512-sBgfTlhrphB5OgZxJC9wgWk1drUUw5lO3LiudpjmGkjVWvLS2zljwjYooGhKVzJYOwd1/AV41OT6ZK/W3M+Kkg==
   dependencies:
     classnames "~2.3.1"
     date-fns "^1.29.0"
@@ -8562,13 +8562,13 @@ ra-core@^3.19.10:
     query-string "^5.1.1"
     reselect "~3.0.0"
 
-ra-data-json-server@3.19.10:
-  version "3.19.10"
-  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.19.10.tgz#73da52c3addb1b17a9c3e625269a3c7c8fcce428"
-  integrity sha512-ypM3gimo8z1dEiJP6/CDg48s9D75qmlZMLTUxzU5oOgjpdVHbmrRuTXUT6sgM4aGzT9ucaDhClcjusgzhYf4ag==
+ra-data-json-server@3.19.11:
+  version "3.19.11"
+  resolved "https://registry.yarnpkg.com/ra-data-json-server/-/ra-data-json-server-3.19.11.tgz#928230b285d43541dfe3321e3d2e61505c50c17b"
+  integrity sha512-pZwuHCxua6GVHy7I7Y/K0O2PiPc4p7J8IQfIqX5RAcn3saAZfTMCORo8j97G3wd7apkUseL7iB+nm4Ml+DOXlQ==
   dependencies:
     query-string "^5.1.1"
-    ra-core "^3.19.10"
+    ra-core "^3.19.11"
 
 ra-data-simple-rest@3.19.10:
   version "3.19.10"
