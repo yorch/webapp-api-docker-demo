@@ -1,4 +1,3 @@
-import React from 'react';
 import { Admin, Resource } from 'react-admin';
 // import jsonServerProvider from 'ra-data-json-server';
 import simpleRestProvider from 'ra-data-simple-rest';
