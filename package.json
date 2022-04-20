@@ -50,7 +50,7 @@
     "@babel/preset-react": "7.16.7",
     "@nrwl/cypress": "13.10.0",
     "@nrwl/eslint-plugin-nx": "13.10.0",
-    "@nrwl/express": "13.10.0",
+    "@nrwl/express": "13.10.3",
     "@nrwl/jest": "13.10.0",
     "@nrwl/node": "13.10.0",
     "@nrwl/react": "13.10.0",
