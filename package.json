@@ -67,7 +67,7 @@
     "@typescript-eslint/parser": "5.18.0",
     "cypress": "9.5.3",
     "dotenv": "16.0.0",
-    "eslint": "8.13.0",
+    "eslint": "8.15.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
@@ -79,6 +79,6 @@
     "ts-jest": "27.1.4",
     "ts-node": "10.7.0",
     "tslint": "6.1.3",
-    "typescript": "~4.6.3"
+    "typescript": "~4.6.4"
   }
 }
