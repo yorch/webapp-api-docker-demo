@@ -1662,37 +1662,6 @@
     tmp "~0.2.1"
     tslib "^2.3.0"
 
-"@nrwl/node@13.10.0":
-  version "13.10.0"
-  resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-13.10.0.tgz#496f35d6e2aaf4b20daa15c82fee28c0713e3d19"
-  integrity sha512-N1XbTBDB+bWl6j54YxFVaZ6O3JmMTYU/igj7/p4mBCXSQbzsi53MYAKj3pW4WqyFRToRK0eQcnjjClNpSDAung==
-  dependencies:
-    "@nrwl/devkit" "13.10.0"
-    "@nrwl/jest" "13.10.0"
-    "@nrwl/js" "13.10.0"
-    "@nrwl/linter" "13.10.0"
-    "@nrwl/workspace" "13.10.0"
-    chalk "4.1.0"
-    copy-webpack-plugin "^9.0.1"
-    enhanced-resolve "^5.8.3"
-    fork-ts-checker-webpack-plugin "6.2.10"
-    fs-extra "^9.1.0"
-    glob "7.1.4"
-    license-webpack-plugin "^4.0.2"
-    rxjs "^6.5.4"
-    rxjs-for-await "0.0.2"
-    source-map-support "0.5.19"
-    terser-webpack-plugin "^5.3.0"
-    tree-kill "1.2.2"
-    ts-loader "^9.2.6"
-    ts-node "~9.1.1"
-    tsconfig-paths "^3.9.0"
-    tsconfig-paths-webpack-plugin "3.5.2"
-    tslib "^2.3.0"
-    webpack "^5.58.1"
-    webpack-merge "^5.8.0"
-    webpack-node-externals "^3.0.0"
-
 "@nrwl/node@14.1.7":
   version "14.1.7"
   resolved "https://registry.yarnpkg.com/@nrwl/node/-/node-14.1.7.tgz#8388c511ffd0dd48fff3ecfadc1d5df15b06b35d"
@@ -5659,16 +5628,7 @@ fs-constants@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 
-fs-extra@^10.0.0:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.1.tgz#27de43b4320e833f6867cc044bfce29fdf0ef3b8"
-  integrity sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==
-  dependencies:
-    graceful-fs "^4.2.0"
-    jsonfile "^6.0.1"
-    universalify "^2.0.0"
-
-fs-extra@^10.1.0:
+fs-extra@^10.0.0, fs-extra@^10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
   integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
