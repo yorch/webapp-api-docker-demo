@@ -43,7 +43,7 @@
     "react-dom": "18.0.0",
     "reflect-metadata": "0.1.13",
     "styled-components": "5.3.5",
-    "typeorm": "0.2.45",
+    "typeorm": "0.3.6",
     "winston": "3.7.2"
   },
   "devDependencies": {
