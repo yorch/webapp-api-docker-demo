@@ -22,7 +22,7 @@ export const AppDataSource = new DataSource({
   logging: true,
 });
 
-export const initDataSource = async () =>
+export const initAppDataSource = async () =>
   AppDataSource.initialize()
     .then(() => {
       console.log('Data Source has been initialized!');

@@ -1,6 +1,6 @@
 import { Express } from 'express';
 import { Message } from '@webapp-api-docker-demo/api-interfaces';
-import { AppDataSource } from './datasource';
+import { AppDataSource } from './app-datasource';
 import { environment } from './environments/environment';
 import { Actor, Film } from './entity';
 
