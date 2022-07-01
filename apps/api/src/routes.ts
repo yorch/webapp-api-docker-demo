@@ -31,7 +31,11 @@ export const setupRoutes = ({
 
   app.get(`${apiBasePath}/actors/:id`, async ({ params }, res) => {
     const repository = dbConnection.getRepository(Actor);
-    res.json(await repository.findOne(params.id));
+    res.json(
+      await repository.findOne({
+        where: { actor_id: Number(params.id) },
+      })
+    );
   });
 
   app.get(`${apiBasePath}/movies`, async (req, res) => {
@@ -46,6 +50,10 @@ export const setupRoutes = ({
 
   app.get(`${apiBasePath}/movies/:id`, async ({ params }, res) => {
     const repository = dbConnection.getRepository(Film);
-    res.json(await repository.findOne(params.id));
+    res.json(
+      await repository.findOne({
+        where: { film_id: Number(params.id) },
+      })
+    );
   });
 };
