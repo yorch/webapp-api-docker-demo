@@ -20,7 +20,7 @@
     "express": "4.18.1",
     "pg": "8.7.3",
     "ra-data-json-server": "3.19.11",
-    "ra-data-simple-rest": "3.19.11",
+    "ra-data-simple-rest": "4.2.0",
     "react": "18.2.0",
     "react-admin": "3.19.11",
     "react-dom": "18.2.0",
