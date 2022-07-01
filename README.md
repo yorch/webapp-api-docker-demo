@@ -32,15 +32,20 @@ The architecture and tech stack of the deployed application consist of:
 - Create an `.env` file based on `.env.sample` (ie: `cp .env.sample .env`).
 - Update the env variables in your new `.env` file, mainly `DOMAIN`.
 - Run the build:
+
   ```sh
   ./build-with-docker.sh
   ```
+
   This command will install all NodeJS dependencies and run the build using `yarn` inside a Docker container and saving the results in your server, so you don't have to install NodeJS / Yarn on the server, which makes this very portable.
+
 - Once the build is complete, the compiled bundles for the web app and server will live in `dist` directory.
 - Next, we need to run Docker Compose to prepare and start all the require containers for the whole stack. We can use:
+
   ```sh
   ./run-prod.sh
   ```
+
   This will run all the containers configured in `docker-compose.prod.yml`.
 
 ## Endpoints
@@ -89,9 +94,9 @@ yarn start
 
 This project was generated using [Nx](https://nx.dev).
 
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+🔎 **Smart, Fast and Extensible Build System**
 
 ## Adding capabilities to your workspace
 
@@ -99,7 +104,7 @@ Nx supports many plugins which add capabilities for developing different types o
 
 These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
 
-Below are some plugins which you can add to your workspace:
+Below are our core plugins:
 
 - [React](https://reactjs.org)
   - `npm install --save-dev @nrwl/react`
@@ -113,6 +118,8 @@ Below are some plugins which you can add to your workspace:
   - `npm install --save-dev @nrwl/express`
 - [Node](https://nodejs.org)
   - `npm install --save-dev @nrwl/node`
+
+There are also many [community plugins](https://nx.dev/community) you could add.
 
 ## Generate an application
 
@@ -128,11 +135,11 @@ Run `nx g @nrwl/react:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
-Libraries are sharable across libraries and applications. They can be imported from `@webapp-api-docker-demo/mylib`.
+Libraries are shareable across libraries and applications. They can be imported from `@webapp-api-docker-demo/mylib`.
 
 ## Development server
 
-Run `nx serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `nx serve my-app` for a dev server. Navigate to <http://localhost:4200/>. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -150,14 +157,26 @@ Run `nx affected:test` to execute the unit tests affected by a change.
 
 ## Running end-to-end tests
 
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
+Run `nx e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
 Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
 ## Understand your workspace
 
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+Run `nx graph` to see a diagram of the dependencies of your projects.
 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+## ☁ Nx Cloud
+
+### Distributed Computation Caching & Distributed Task Execution
+
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
+
+Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
+
+Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
+
+Visit [Nx Cloud](https://nx.app/) to learn more.

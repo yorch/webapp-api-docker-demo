@@ -1,7 +1,10 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "sourceMap": false,
+    "outDir": "../../dist/out-tsc",
+    "allowJs": true,
     "types": ["cypress", "node"]
   },
-  "include": ["**/*.ts", "**/*.js"]
+  "include": ["src/**/*.ts", "src/**/*.js"]
 }

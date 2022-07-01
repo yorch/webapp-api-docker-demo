@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import * as express from 'express';
-import cors from 'cors';
+import * as cors from 'cors';
 import { config } from './config';
 import { setupDatabase } from './database';
 import { setupRoutes } from './routes';

@@ -6,6 +6,7 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
+// TODO: Check if this is still needed
 // Needed because of a bug when transpiling one of the deps of React Admin
 // https://github.com/inspect-js/has-symbols/issues/6
 // https://github.com/inspect-js/has-symbols/issues/4
