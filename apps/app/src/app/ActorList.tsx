@@ -1,7 +1,7 @@
-import { List, Datagrid, TextField, ResourceComponentProps } from 'react-admin';
+import { List, Datagrid, TextField } from 'react-admin';
 
-export const ActorList = (props: ResourceComponentProps) => (
-  <List {...props} pagination={false}>
+export const ActorList = () => (
+  <List pagination={false}>
     <Datagrid>
       <TextField source="id" />
       <TextField source="first_name" />
