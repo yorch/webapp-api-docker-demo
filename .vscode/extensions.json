@@ -1,7 +1,10 @@
 {
   "recommendations": [
+    "nrwl.angular-console",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
-    "irongeek.vscode-env"
+    "irongeek.vscode-env",
+    "firsttris.vscode-jest-runner",
+    "dbaeumer.vscode-eslint"
   ]
 }
