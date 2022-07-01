@@ -1,8 +1,8 @@
 import 'reflect-metadata';
 import * as express from 'express';
 import * as cors from 'cors';
+import { initAppDataSource } from './app-datasource';
 import { config } from './config';
-import { initDataSource } from './datasource';
 import { setupRoutes } from './routes';
 
 const { port } = config;
@@ -10,7 +10,7 @@ const { port } = config;
 const app = express();
 
 (async () => {
-  await initDataSource();
+  await initAppDataSource();
 
   app.use(
     cors({
