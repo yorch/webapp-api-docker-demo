@@ -1,4 +1,5 @@
-module.exports = {
+/* eslint-disable */
+export default {
   name: 'app',
   preset: '../../jest.config.js',
   transform: {

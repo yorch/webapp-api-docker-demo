@@ -10,9 +10,6 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
   "generators": {
     "@nrwl/workspace": {
       "library": {
@@ -72,5 +69,6 @@
       }
     }
   },
-  "defaultProject": "app"
+  "defaultProject": "app",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json"
 }

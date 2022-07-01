@@ -2,6 +2,7 @@
   "version": 1,
   "projects": {
     "api": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/api",
       "sourceRoot": "apps/api/src",
       "projectType": "application",
@@ -51,7 +52,7 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/api/jest.config.js",
+            "jestConfig": "apps/api/jest.config.ts",
             "tsConfig": "apps/api/tsconfig.spec.json",
             "passWithNoTests": true
           }
@@ -60,6 +61,7 @@
       "tags": []
     },
     "api-interfaces": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/api-interfaces",
       "sourceRoot": "libs/api-interfaces/src",
       "projectType": "library",
@@ -80,7 +82,7 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/api-interfaces/jest.config.js",
+            "jestConfig": "libs/api-interfaces/jest.config.ts",
             "tsConfig": "libs/api-interfaces/tsconfig.spec.json",
             "passWithNoTests": true
           }
@@ -89,6 +91,7 @@
       "tags": []
     },
     "app": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/app",
       "sourceRoot": "apps/app/src",
       "projectType": "application",
@@ -129,8 +132,15 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "development": {
+              "extractLicenses": false,
+              "optimization": false,
+              "sourceMap": true,
+              "vendorChunk": true
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@nrwl/web:dev-server",
@@ -141,8 +151,12 @@
           "configurations": {
             "production": {
               "buildTarget": "app:build:production"
+            },
+            "development": {
+              "buildTarget": "app:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "lint": {
           "builder": "@nrwl/linter:lint",
@@ -159,7 +173,7 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/app/jest.config.js",
+            "jestConfig": "apps/app/jest.config.ts",
             "tsConfig": "apps/app/tsconfig.spec.json",
             "passWithNoTests": true
           }
@@ -168,6 +182,7 @@
       "tags": []
     },
     "app-e2e": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/app-e2e",
       "sourceRoot": "apps/app-e2e/src",
       "projectType": "application",
@@ -199,63 +214,5 @@
       "implicitDependencies": ["app"]
     }
   },
-  "schematics": {
-    "@nrwl/workspace": {
-      "library": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/cypress": {
-      "cypress-project": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/react": {
-      "application": {
-        "style": "styled-components",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "styled-components"
-      },
-      "library": {
-        "style": "styled-components",
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/next": {
-      "application": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/web": {
-      "application": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/node": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/nx-plugin": {
-      "plugin": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/nest": {
-      "application": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/express": {
-      "application": {
-        "linter": "eslint"
-      }
-    }
-  }
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
