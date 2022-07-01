@@ -1,18 +1,12 @@
 import { Express } from 'express';
-import { Connection } from 'typeorm';
 import { Message } from '@webapp-api-docker-demo/api-interfaces';
+import { AppDataSource } from './datasource';
 import { environment } from './environments/environment';
 import { Actor, Film } from './entity';
 
 const { apiBasePath } = environment;
 
-export const setupRoutes = ({
-  app,
-  dbConnection,
-}: {
-  app: Express;
-  dbConnection: Connection;
-}): void => {
+export const setupRoutes = ({ app }: { app: Express }) => {
   const greeting: Message = { message: 'Welcome to api!' };
 
   app.get(apiBasePath.length === 0 ? '/' : apiBasePath, (req, res) => {
@@ -20,7 +14,7 @@ export const setupRoutes = ({
   });
 
   app.get(`${apiBasePath}/actors`, async (req, res) => {
-    const repository = dbConnection.getRepository(Actor);
+    const repository = AppDataSource.getRepository(Actor);
     const entities = await repository.find();
     const { length } = entities;
     res.set('Content-Range', `actors 0-${length - 1}/${length}`);
@@ -30,7 +24,7 @@ export const setupRoutes = ({
   });
 
   app.get(`${apiBasePath}/actors/:id`, async ({ params }, res) => {
-    const repository = dbConnection.getRepository(Actor);
+    const repository = AppDataSource.getRepository(Actor);
     res.json(
       await repository.findOne({
         where: { actor_id: Number(params.id) },
@@ -39,7 +33,7 @@ export const setupRoutes = ({
   });
 
   app.get(`${apiBasePath}/movies`, async (req, res) => {
-    const repository = dbConnection.getRepository(Film);
+    const repository = AppDataSource.getRepository(Film);
     const entities = await repository.find();
     const { length } = entities;
     res.set('Content-Range', `actors 0-${length - 1}/${length}`);
@@ -49,7 +43,7 @@ export const setupRoutes = ({
   });
 
   app.get(`${apiBasePath}/movies/:id`, async ({ params }, res) => {
-    const repository = dbConnection.getRepository(Film);
+    const repository = AppDataSource.getRepository(Film);
     res.json(
       await repository.findOne({
         where: { film_id: Number(params.id) },

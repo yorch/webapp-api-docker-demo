@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import * as express from 'express';
 import * as cors from 'cors';
 import { config } from './config';
-import { setupDatabase } from './database';
+import { initDataSource } from './datasource';
 import { setupRoutes } from './routes';
 
 const { port } = config;
@@ -10,7 +10,7 @@ const { port } = config;
 const app = express();
 
 (async () => {
-  const dbConnection = await setupDatabase();
+  await initDataSource();
 
   app.use(
     cors({
@@ -24,7 +24,7 @@ const app = express();
 
   app.use(express.text());
 
-  setupRoutes({ app, dbConnection });
+  setupRoutes({ app });
 
   const server = app.listen(port, () => {
     console.log(`Listening at http://localhost:${port}/api`);
