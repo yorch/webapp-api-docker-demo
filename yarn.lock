@@ -11821,10 +11821,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:0.13.7":
-  version: 0.13.7
-  resolution: "regenerator-runtime@npm:0.13.7"
-  checksum: 52b66e6669152c0b1bccd95c8e11aabbfe67bb97bdf00e223bdf723b0f0052d4da5c02001d4c4bef576bdc5bcdc38a20496d1b5363b65c950c8434ed5071d9e0
+"regenerator-runtime@npm:0.13.10":
+  version: 0.13.10
+  resolution: "regenerator-runtime@npm:0.13.10"
+  checksum: 09893f5a9e82932642d9a999716b6c626dc53ef2a01307c952ebbf8e011802360163a37c304c18a6c358548be5a72b448e37209954a18696f21e438c81cbb4b9
   languageName: node
   linkType: hard
 
@@ -14014,7 +14014,7 @@ __metadata:
     react-is: 18.2.0
     react-test-renderer: 18.2.0
     reflect-metadata: 0.1.13
-    regenerator-runtime: 0.13.7
+    regenerator-runtime: 0.13.10
     rimraf: 3.0.2
     styled-components: 5.3.5
     ts-jest: 27.1.4
