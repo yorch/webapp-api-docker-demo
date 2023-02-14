@@ -6097,6 +6097,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dompurify@npm:^2.4.3":
+  version: 2.4.4
+  resolution: "dompurify@npm:2.4.4"
+  checksum: 6a29c2a1b76c0723564d009a26b9123e23ea61ac5d6f30cdcdd01f4d48b257a99adb5952c7a08390a7323353dbb333ad7d650c7cf3f5b6b5bb81eab5826a7f7c
+  languageName: node
+  linkType: hard
+
 "domutils@npm:^2.8.0":
   version: 2.8.0
   resolution: "domutils@npm:2.8.0"
@@ -11499,12 +11506,13 @@ __metadata:
   linkType: hard
 
 "ra-ui-materialui@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "ra-ui-materialui@npm:4.2.0"
+  version: 4.7.6
+  resolution: "ra-ui-materialui@npm:4.7.6"
   dependencies:
     autosuggest-highlight: ^3.1.1
     clsx: ^1.1.1
     css-mediaquery: ^0.1.2
+    dompurify: ^2.4.3
     inflection: ~1.12.0
     jsonexport: ^3.2.0
     lodash: ~4.17.5
@@ -11523,7 +11531,7 @@ __metadata:
     react-hook-form: "*"
     react-router: ^6.1.0
     react-router-dom: ^6.1.0
-  checksum: bc7b83701403cba0842c71f158bb6ff77a508e20087e1ecdbc98af9cdcfee8cf1b700f43d77434dab02cb83aab1554bdfb8dbb58972e474d1b50fc7ed44ca341
+  checksum: 7ff128656881cd3ef1459812f39abed197a635d34200de0ce3c95c548ae8cd53129aea380a71fb98304f6c4a95993b2054489204130777def7bf5b69a5bbb4ad
   languageName: node
   linkType: hard
 
