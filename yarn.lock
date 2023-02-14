@@ -5436,6 +5436,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"core-js@npm:^3.28.0":
+  version: 3.28.0
+  resolution: "core-js@npm:3.28.0"
+  checksum: 3155fd0ec16d0089106b145e9595280a4ea4bde0d7ff26aa14364cd4f1c203baf6620c3025acd284f363d08b9f21104101692766ca9a36ffeee7307bdf3e1881
+  languageName: node
+  linkType: hard
+
 "core-util-is@npm:1.0.2":
   version: 1.0.2
   resolution: "core-util-is@npm:1.0.2"
@@ -13991,7 +13998,7 @@ __metadata:
     "@typescript-eslint/parser": ~5.24.0
     babel-jest: 27.5.1
     babel-plugin-styled-components: 1.10.7
-    core-js: ^3.6.5
+    core-js: ^3.28.0
     cors: 2.8.5
     cypress: ^9.1.0
     eslint: ~8.15.0
